@@ -1,0 +1,199 @@
+1. Create an HTML page with a single paragraph of text. Write CSS to set the
+font size for most elements on the page to 20px (you may ignore headers,
+subscripts, and other items that often have a different size).
+<head>
+  <style>
+    body {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    Mollit cupidatat sunt aliqua. Consectetur in aute adipisicing sit qui
+    nostrud. Laborum enim sit velit ipsum enim ullamco incididunt sint.
+    Officia exercitation proident voluptate cupidatat elit culpa dolore ut
+    excepteur.
+  </p>
+</body>
+
+2. Change the font family for the page from the previous problem to a sans-serif
+font.
+
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+3. Change the CSS for the previous problem to give the browser a choice one of
+three fonts (Tahoma, Trebuchet MS, Verdana), depending on what is available,
+before it uses the default sans-serif font.
+
+body {
+  font-family: Tahoma, "Trebuchet MS", Verdana, sans-serif;
+  font-size: 20px;
+}
+
+4. Change the text from the previous problem to italic.
+
+body {
+  font-style: italic;
+}
+
+5. Change the CSS from the previous problem to boldface (keep the italics).
+
+body {
+  font-weight: bold;
+}
+
+6. Change the CSS from the previous problem to increase the line height to 2.5
+times its default height.
+
+body {
+  line-height: 2.5;
+}
+
+7. Change the CSS from the previous problem to a shorthand form that uses
+precisely one property. The output should not change.
+
+body {
+  font: italic bold 20px/2.5 Tahoma, "Trebuchet MS", Verdana, sans-serif;
+}
+
+8. Change the CSS from the previous problem to right-align the text within the
+paragraph:
+
+body {
+  text-align: right;
+}
+
+9. Change the CSS from the previous problem to center-align the text within the
+paragraph:
+
+body {
+  text-align: center;
+}
+
+10. Change the CSS from the previous problem to fully justify the text within
+the paragraph:
+
+body {
+  text-align: justify;
+}
+
+11. Change the CSS from the previous problem to indent the start of the
+paragraph by 4em.
+
+body {
+  text-indent: 4em;
+}
+
+12. Write the CSS needed to reproduce this screenshot:
+
+You should use this HTML:
+
+<article>
+  <header>
+    <h1>Finessing `feColorMatrix`</h1>
+  </header>
+  <p>
+    Harness the power of <code>feColorMatrix</code> to create detailed
+    filters, with Una Kravets as your guide.
+  </p>
+</article>
+
+The h1 heading uses the Georgia font while the code element uses the browser's
+default monospace font. Use a line height of 1-1/2 times the default size. The
+remaining text uses a 14px sans-serif font, with Helvetica and Arial preferred.
+
+article {
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: Georgia, Serif;
+}
+
+code {
+  font-family: monospace;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+13. Change the CSS from the previous problem to display the h1 element in blue,
+and the code in green.
+
+h1 {
+  font-family: Georgia, Serif;
+  color: rgb(0, 0, 255);
+}
+
+code {
+  font-family: monospace;
+  font-style: italic;
+  text-decoration: underline;
+  color: rgb(0, 255, 0);
+}
+
+14. Write the CSS needed to reproduce the screenshot.
+
+You should use this HTML:
+
+<p>That episode was <mark>un<strong>be<em>lieve</em></strong>able</mark>!</p>
+
+The font highlighted in yellow is Courier; use a backup font of monospace. The
+text uses four font sizes - 12px, 15px, 18px and 20px.
+
+p {
+  font-size: 18px;
+}
+
+mark {
+  background-color: rgb(255, 255, 0);
+  font-family: Courier, monospace;
+  font-size: 12px;
+}
+
+strong {
+  font-size: 15px;
+}
+
+em {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+15. Create some HTML with this paragraph:
+
+<p>
+  The Creating Hyperlinks section of Getting to Know HTML discusses
+  hyperlinks, or anchors. Be sure to work both "In Practice" sections; they
+  pick up from where you left off in an earlier reading assignment.
+</p>
+
+Convert the text Getting to Know HTML to a hypertext link to this URL:
+
+http://learn.shayhowe.com/html-css/getting-to-know-html/#creating-hyperlinks
+
+The link should open in a new browser tab or window. Add CSS to remove the
+underline and change the color to red.
+
+<p>
+  The Creating Hyperlinks section of
+  <a href='http://learn.shayhowe.com/html-css/getting-to-know-html/#creating-hyperlinks'
+     target='_blank'>
+    Getting to Know HTML
+  </a>
+  discusses hyperlinks, or anchors. Be sure to work both "In Practice" sections;
+  they pick up from where you left off in an earlier reading assignment.
+</p>
+
+in style sheet:
+
+a {
+  text-decoration: none;
+  color: rgb(255, 0, 0);
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>07</title>
+    <meta charset="utf-8" />
+    <style>
+      section {
+        background-color: yellow;
+        border: 1px solid red;
+        box-sizing: content-box;
+        display: inline-block;
+        height: 400px;
+        margin: 0;
+        padding: 20px;
+        width: 900px;
+      }
+
+      article {
+        background-color: lime;
+        border: 1px solid blue;
+        height: 100%;
+        margin: 0;
+        padding: 10px;
+        width: 49%;
+        display: inline-block;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>content (at 49% width)</article>
+      <article>content (at 49% width)</article>
+    </section>
+    <p>
+      <i>
+     7. Challenge: Given our solution to the previous question, what will happen
+     if we put the article tags on separate lines?
+
+     <br/>Try to figure out the answer without peeking. Why do you think this is?
+    </i>
+    </p>
+    <p>
+      Answer:
+    </p>
+    <p>
+      The browser seems to add an empty space in between the two `article`
+      elements when the two are separated by an empty space or a newline
+      character. Changing the article width propoerty to 49% allows for the
+      empty space to be added in the parent element `section`.
+    </p>
+    <p>
+      For inline block elements, the blank space/new-line between elements is
+      transofmed to a single white space, hence causing a shift in spacing.
+    </p>
+  </body>
+</html>

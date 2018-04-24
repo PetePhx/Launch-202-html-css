@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>05</title>
+    <meta charset="utf-8" />
+    <style>
+    div {
+      background-color: lightgray;
+      border: 1px solid black;
+      box-sizing: content-box;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      width: 720px;
+    }
+
+    tag1, tag2 {
+      box-sizing: border-box;
+      height: 240px;
+      margin: 0;
+      padding: 0;
+      width: 360px;
+    }
+
+    tag1 {
+      background-color: yellow;
+      /* display: inline-block; */
+    }
+
+    tag2 {
+      background-color: lime;
+      /* display: inline-block; */
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <tag1>content</tag1><tag2>content</tag2>
+    </div>
+    <p>
+      <i>
+      5. Which of the following element pairs will display side-by-side in the
+      `div`? Select all that apply:
+      <br/>
+      <br/>Both elements are block elements.
+      <br/>Both elements are inline elements. (<strong>yes</strong>)
+      <br/>Both elements are inline-block elements. (<strong>yes</strong>)
+      <br/>One element is a block element, and one is an inline element.
+      <br/>One element is a block element, and one is an inline-block element.
+      <br/>One element is an inline element, and one is an inline-block element.
+      (<strong>yes</strong>)
+      <br/>
+      <br/>You may assume that any inline element has a content width of no
+      more then 360 pixels. Remember, the width property doesn't affect inline
+      elements so this "content width" is the actual width of the content area as
+      determined by your browser.
+    </i>
+    </p>
+    <p>
+      Answer:
+    </p>
+    <p>
+      The cases where we have any combinations of inline and/or inline-block
+      elements, as these would allow for two items side by side
+      fitting inside the `div` content-box. Block elements have to be each on a
+      line by itself.
+    </p>
+  </body>
+</html>

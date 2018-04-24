@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>01</title>
+    <meta charset="utf-8" />
+    <style>
+      div {
+      background-color: lightgray;
+      border: 1px solid black;
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      }
+
+      img {
+      border: 4px solid red;
+      box-sizing: content-box;
+      display: inline-block;
+      height: 300px;
+      margin: 20px 19px 10px 11px;
+      padding: 10px 20px;
+      width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="#" alt="test" title="test" />
+    </div>
+    <p>
+      <em>Given the code below, what is the minimum width and height (in pixels)
+      that the div needs to entirely contain the img element (including its
+      margins)?</em>
+    </p>
+    <p>
+      img is a content box, therefore thw height and width properties determine the
+      size of the content (300px and 500px).
+    </p>
+    <p>
+      To these values are added padding, border and margin for the im from all sides
+      to arrive at:
+    </p>
+    <p>
+      img height: 300 + 10 + 10 + 4 + 4 + 20 + 10 = 358
+    </p>
+    <p>
+      img width: 500 + 20 + 20 + 4 + 4 + 19 + 11 = 578
+    </p>
+    <p>
+      To these div borders and paddings are added to arrive at the div box size:
+    </p>
+    <p>
+      div height: <strong>360px</strong>
+    </p>
+    <p>
+      div width: <strong>580px</strong>
+    </p>
+  </body>
+</html>

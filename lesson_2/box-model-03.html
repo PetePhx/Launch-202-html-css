@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>03</title>
+    <meta charset="utf-8" />
+    <style>
+      div {
+        background-color: lightgray;
+        border: 1px solid black;
+        box-sizing: border-box;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        /* height: 80px;
+        width: 180px; */
+      }
+
+      em {
+        border: 4px solid red;
+        box-sizing: content-box;
+        display: inline;
+        height: 300px;
+        margin: 20px 19px 10px 11px;
+        padding: 10px 20px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <em>content</em>
+    </div>
+    <p>
+      <i>
+      3. Given the code below, what is the minimum width and height (in pixels)
+      that the div needs to entirely contain the em element (including its
+      margins)?
+    </i>
+    </p>
+    <p>
+      `div` and `em` have visual formatting models of border-box and
+      content-box, respectively.
+    </p>
+    <p>
+      Unlike the previous exercise, the inner element here (`em`) has the
+      inline display property. For inline elements, browsers ignore the
+      width/height values (instead calculating based on the content) as well as
+      the top/bottom margin values. The use of these properties for inline
+      elements is not recommended though.
+    </p>
+    <p>
+      The content in this case being default font size, this gives us the
+      starting point of 16px for default font size. For simplicity sake, we
+      start by 50px height and 100px width, then calculating the height and
+      width values for `em`:
+    </p>
+    <p>
+      em height: 50 + 10 + 10 + 4 + 4 = 78px
+    </p>
+    <p>
+      em width: 100 + 20 + 20 + 4 + 4 + 19 + 11 = 178px
+    </p>
+    <p>
+      To these div borders and paddings are added to arrive at the div box
+      size:
+    </p>
+    <p>
+      div height: <strong>80px</strong>
+    </p>
+    <p>
+      div width: <strong>180px</strong>
+    </p>
+  </body>
+</html>

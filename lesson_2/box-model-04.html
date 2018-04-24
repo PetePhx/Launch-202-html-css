@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>04</title>
+    <meta charset="utf-8" />
+    <style>
+      div {
+        background-color: lightgray;
+        border: 1px solid black;
+        box-sizing: border-box;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+      }
+
+      article {
+        border: 4px solid red;
+        box-sizing: border-box;
+        display: inline-block;
+        height: 300px;
+        margin: 20px 19px 10px 11px;
+        padding: 10px 20px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <article>content</article>
+    </div>
+    <p>
+      <i>
+      4. Given the code below, what is the minimum width and height (in pixels)
+      that the div needs to be to entirely contain the article element
+      (including its margins)?
+    </i>
+    </p>
+    <p>
+      `div` and `article` have both visual formatting models of border-box.
+    </p>
+    <p>
+      The inner element here (`article`) has the inline-block display property.
+    </p>
+    <p>
+      For inline-block elements, the height property is taken into account.
+    </p>
+    <p>
+      article height: 300 + 20 + 10 = 330px
+    </p>
+    <p>
+      article width: 500 + 19 + 11 = 530px
+    </p>
+    <p>
+      To these div borders and paddings are added to arrive at the div box
+      size:
+    </p>
+    <p>
+      div height: <strong>332px</strong>
+    </p>
+    <p>
+      div width: <strong>532px</strong>
+    </p>
+  </body>
+</html>

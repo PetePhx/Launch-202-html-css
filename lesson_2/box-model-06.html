@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>06</title>
+    <meta charset="utf-8" />
+    <style>
+      section {
+        background-color: yellow;
+        border: 1px solid red;
+        box-sizing: content-box;
+        display: inline-block;
+        height: 400px;
+        margin: 0;
+        padding: 20px;
+        width: 900px;
+      }
+
+      article {
+        background-color: lime;
+        border: 1px solid blue;
+        height: 100%;
+        margin: 0;
+        padding: 10px;
+        width: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>content</article><article>content</article>
+    </section>
+    <p>
+      <i>
+      6. Will the following code display the two article boxes side-by-side? If
+      not, why not? How would you fix it so that it places the boxes side-by-side?
+    </i>
+    </p>
+    <p>
+      Answer:
+    </p>
+    <p>
+      No, since `article` has a block element visual formatting model. To allow
+      for side-by-side display, the display property has to be set to inline or
+      inline-block.
+    </p>
+    <p>
+      The box-sizing property also needs to be set to border-box
+      in order for the border thicknes to be absorbed into the width property
+      of 50%, hence `section` width accomodating two side by side article itmes.
+    </p>
+  </body>
+</html>

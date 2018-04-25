@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>spacing and dimensions 10</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        margin: 50px;
+      }
+
+      ul {
+        background-color: #a7ceff;
+        border: 10px solid blue;
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        width: 25%;
+        background-color: #ffc;
+        border: 10px solid red;
+        box-sizing: border-box;
+        line-height: 120px;
+        min-height: 120px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      10. Create a new HTML file with the following CSS and HTML.
+    </p>
+
+    <p>
+      Don't overlook the oddly-formatted comments between the list items above!
+      They're a necessary part of this problem.
+    </p>
+
+    <p>
+      Add the CSS needed to list all four items side-by-side in one row. Each
+      list item should use the same amount of space as the other elements, and
+      together they should hide the blue background entirely (but not the blue
+      border).
+    </p>
+
+    <ul>
+      <li>Item 1</li><!--
+      --><li>Item 2</li><!--
+      --><li>Item 3</li><!--
+      --><li>Item 4</li>
+    </ul>
+
+    <p>
+      <em>First we change the visual formatting of `li` elements to inline-block
+      from the default block to have them aligned side by side. Next we set the
+      width to 25% so the four border-box elements fully cover the `ul` element's
+      blue background.</em>
+    </p>
+  </body>
+</html>

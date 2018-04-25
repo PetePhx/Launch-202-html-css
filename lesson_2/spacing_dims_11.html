@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>spacing and dimensions 11</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        margin: 50px;
+      }
+
+      ul {
+        background-color: #a7ceff;
+        border: 10px solid blue;
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        width: 23%;
+        margin: 0 1%;
+        background-color: #ffc;
+        border: 10px solid red;
+        box-sizing: border-box;
+        line-height: 120px;
+        min-height: 120px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      11. Using the code from the previous problem solution, set the left and
+      right margin on each li element to 1%, but do not let the inner boxes wrap
+      around - they must all continue to fit on the same line with no change in
+      the outer box's size.
+    </p>
+
+    <ul>
+      <li>Item 1</li><!--
+      --><li>Item 2</li><!--
+      --><li>Item 3</li><!--
+      --><li>Item 4</li>
+    </ul>
+
+    <p>
+      <em>We set the CSS property `margin: 0 1%;` for right and left margins. to
+      accomodate the extra space for margins the widths of the `li` elements
+      needs to be changed to 23% for the extra left and right 1% margins. Border
+      box doesn't include margin size.</em>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>spacing and dimensions 07</title>
+    <meta charset="utf-8" />
+    <style>
+      div {
+        box-sizing: border-box;
+        width: 300px;
+        height: 300px;
+      }
+
+      .pink {
+        background-color: #fcc;
+        padding: 20px;
+      }
+
+      .violet {
+        background-color: #ccf;
+        border: 5px;
+        border-color: black;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      7. Add 20 pixels padding to all four sides of the red div. Notice the
+      different widths again. Add a CSS property to both elements to ensure the
+      total width for each is 300px rather than 300px and then some.
+    </p>
+
+    <div class="pink"></div>
+    <div class="violet"></div>
+
+    <p>
+      <em>Adding padding to the pink element increases its size. In order to
+        avoid increasing the size of the visible area, we change the visual
+        formatting model, i.e. the box-sizing property to border-box from the
+        default value of content-box.</em>
+    </p>
+  </body>
+</html>

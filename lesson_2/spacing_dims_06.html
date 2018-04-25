@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>spacing and dimensions 06</title>
+    <meta charset="utf-8" />
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+      }
+
+      .pink {
+        background-color: #fcc;
+      }
+
+      .violet {
+        background-color: #ccf;
+        border: 5px;
+        border-color: black;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      6. Add a 5-pixel solid black border to the blue div. Compare the widths of
+      the two boxes. Why is the blue box a different size?
+    </p>
+
+    <div class="pink"></div>
+    <div class="violet"></div>
+
+    <p>
+      <em>Since `div` elements have by default content box visual formatting, by
+      adding border the size of the visible element area is increased.</em>
+    </p>
+  </body>
+</html>

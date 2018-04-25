@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>spacing and dimensions 09</title>
+    <meta charset="utf-8" />
+    <style>
+      div {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 300px;
+        height: 300px;
+        margin: 0 10px;
+      }
+
+      .pink {
+        background-color: #fcc;
+        padding: 20px;
+      }
+
+      .violet {
+        background-color: #ccf;
+        border: 5px;
+        border-color: black;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      9. Add 20px of space between the red and blue boxes.
+    </p>
+
+    <div class="pink"></div><div class="violet"></div>
+
+    <p>
+      <em>We try adding 10 pixel left/right margins to both elements. We have to
+        remove the black space between div elements in the html to prevent it
+        from being processed as an extra blank space character.</em>
+    </p>
+  </body>
+</html>

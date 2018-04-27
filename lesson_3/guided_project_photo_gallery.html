@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Photo Gallery Guided Project</title>
+    <meta charset="utf-8" />
+    <style>
+      body, main, figure, figcaption, img {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-image: url(http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/gradient-background.png);
+        background-size: cover;
+      }
+
+      figure {
+        box-sizing: border-box;
+        margin: 50px 0;
+        padding: 0 50px;
+        /* outline: 1px solid red; */
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      figcaption{
+        color: rgb(255, 245, 210);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <ol>
+        <li>
+          After loading the page, you may notice that the images are vertically
+          too near each other, and they're flush with the top and left edges of
+          the window. Adjust the spacing between the figure elements and the
+          distance between the left and right edges of the browser window to
+          50px to give the images some breathing room.
+        </li><br/>
+        <li>
+          Reduce your browser window's width, if necessary, until at least one
+          image exceeds the window width. Next, adjust the CSS to make them all
+          fit inside the window. Don't forget that there is a margin around each
+          figure, which should be evident when you display the page.
+        </li>
+        <p>
+          Once your changes are complete, check what happens as you expand and
+          shrink the browser window; no matter what adjustments you make, all
+          images should fit in the window.
+        </p>
+        <p>
+          <em>Answer: after setting the `img` max-width to 100%, when shrinking the
+          window horizontally the images shrink in size to fit the width of the
+          parent element `figure`.</em>
+        </p>
+        <li>
+          Every image should use the entire width of the figure elements. Modify
+          your CSS to implement this requirement.
+        </li></br>
+        <p>
+          <em>Answer: we replace `max-width: 100%;` with `width: 100%;` for
+            `img`.</em>
+        </p>
+        <li>
+          Reduce the width of each figure to 1/2 the width of the browser window:
+        </li>
+        <p>
+          <em>The width property for `figure` is set to 50%.</em>
+        </p>
+        <li>
+          At this point, the figures are narrow enough that we should be able to
+          squeeze 2 of them in every row on the page. However, since figures are
+          block elements, they always take up an entire row. Instead, you must
+          convert the figure elements to inline-block. Please do so.
+        </li>
+        <p>
+          <em>Setting `display: inline-block;` for `figure`. The image width is
+          set to 40% to accomodate the 50pixel wide left margin, while right
+          margin is set to 0. We also comment out the blank space in html
+          between consequetive `figure` elements to avoid the blank space
+          character from being inserted.</em>
+        </p>
+        <li>
+          There's a small cosmetic issue unrelated to squeezing two images per
+          row. Let's center the captions beneath each image:
+        </li>
+        <p>
+          <em>Set `text-align: center;` for `figure` elements.</em>
+        </p>
+        <li>
+          Returning to the problem of squeezing two images per row, the main
+          issue we have is that we have margins to the left and right of each
+          figure. Recall that we used margins here to satisfy our rule of thumb
+          about choosing margins or padding. However, those margins take up
+          space in the browser window, so we can't squeeze two 50%-width
+          elements side-by-side. Instead, we need to set the left and right
+          margins on the figure elements to 0, and redistribute that space in
+          some other way. Give this a try now.
+        </li>
+        <p>
+          <em>we can do as in section 5 above, or set the left/right margins to 0 and
+            apply the 50px size to left and right paddings, to have them absorbed
+            in the border-box dimensions.</em>
+        </p>
+        <li>
+          The other part of the problem of squeezing two images per row is that
+          there is a small amount of whitespace between every pair of
+          inline-block elements. It's not much whitespace, but it's enough to
+          prevent two 50% elements from fitting side-by-side. Go ahead and make
+          the necessary adjustments to get rid of the whitespace.
+        </li>
+        <p>
+          <em>As in section 5 above, we use html commenting syntax &lt;--! ... --&gt;
+            to void the html blank space between subsequent `figure` elements.
+          </em>
+        </p>
+        <p>
+          <em>Alternatively, we could set the font-size to 0 for the main
+            element to have the extra blanck space inserted occupy no space and
+            then set the font-size back to original value for the child nodes.
+          </em>
+        </p>
+        <li>
+          The images are a bit on the small side. Let's give the user the
+          ability to see them full-sized by clicking on them. When clicked, the
+          browser should load the image directly into a new tab or window. To
+          accomplish this, convert your images into links.
+        </li>
+        <p>
+          <em>The `img` elements are wrappend within anchor `a` elements.
+          </em>
+        </p>
+        <li>
+          You can now get rid of the outline you attached to the figure elements,
+          and assign a pleasant background to the gallery. You can use the
+          background image we used earlier in this lesson
+          (http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/gradient-background.png)
+          or one of your own.
+        </li>
+        <p>
+          <em>We set the background-image property for the body element to the
+            above url. By setting the background-size to `cover` we avoid
+            repetition in the background image.
+          </em>
+        </p>
+      </ol>
+      <p>
+        <em>
+        </em>
+      </p>
+      <figure>
+        <a href="http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/1.jpg">
+          <img src="http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/1.jpg"
+        alt="Transit Shadows" />
+        </a>
+        <figcaption>Transit Shadows</figcaption>
+      </figure><!--
+
+    --><figure>
+        <a href="http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/2.jpg">
+          <img src="http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/2.jpg"
+        alt="Missy Chaplin" />
+        </a>
+        <figcaption>Missy Chaplin</figcaption>
+      </figure><!--
+
+    --><figure>
+        <a href="http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/3.jpg">
+          <img src="http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/3.jpg"
+        alt="Thunderbirds in Formation" />
+        </a>
+        <figcaption>Thunderbirds in Formation</figcaption>
+      </figure><!--
+
+    --><figure>
+        <a href="http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/4.jpg">
+          <img src="http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/4.jpg"
+        alt="Orange Rose" />
+        </a>
+        <figcaption>Orange Rose</figcaption>
+      </figure><!--
+
+    --><figure>
+        <a href="http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/5.jpg">
+          <img src="http://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/5.jpg"
+        alt="Kentucky Darleks" />
+        </a>
+        <figcaption>Kentucky Darleks</figcaption>
+      </figure>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>nested list</title>
+    <meta charset="utf-8" />
+    <style>
+      li, dd, dt {
+        font-size: 1.25rem;
+      }
+
+      .aqua, .turquiose, .teal {
+        width: 50px;
+        height: 25px;
+      }
+
+      .aqua {
+        background-color: aqua;
+      }
+
+      .turquiose {
+        background-color: turquoise;
+      }
+
+      .teal {
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <dl>
+      <dt>Unordered</dt>
+      <dd>A simple list with bullets.</dd>
+      <dd>A plain list with no bullets or sequence numbers.</dd>
+      <dd>
+        <ul>
+          <li>aqua</li>
+          <li>turquiose</li>
+          <li>teal</li>
+        </ul>
+      </dd>
+
+      <dt>Ordered</dt>
+      <dd>A simple list with a visible sequence.</dd>
+      <dd>
+        <ol>
+          <li>aqua</li>
+          <li>turquiose</li>
+          <li>teal</li>
+        </ol>
+      </dd>
+
+      <dt>Description</dt>
+      <dt>Definition</dt>
+      <dd>A list with terms and definitions.</dd>
+      <dd>
+        <dl>
+          <dt>Aqua</dt>   <dd><div class="aqua"></div></dd>
+          <dt>Turquiose</dt> <dd><div class="turquiose"></div></dd>
+          <dt>Teal</dt>  <dd><div class="teal"></div></dd>
+        </dl>
+      </dd>
+    </dl>
+  </body>
+</html>

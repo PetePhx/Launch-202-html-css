@@ -37,6 +37,10 @@
         border-collapse: collapse;
       }
 
+      td {
+        outline: none;
+      }
+
       /*  thick bars */
       table:first-of-type {
         border-top: 1.75rem solid black;
@@ -65,26 +69,27 @@
       }
 
       /* thick bar below calories */
-      table:first-of-type thead tr:nth-of-type(2) td {
+      table:first-of-type thead tr:nth-child(2) td {
         border-bottom: 1rem solid black;
       }
 
-      /* border indent: first table, 'Total Fat' row */
-      /* table:first-of-type tbody tr:nth-of-type(7) td, */
-      table:first-of-type tbody tr:nth-of-type(2) td {
+      /* border indent: first table, 'Total Fat' & 'Total Carb' rows bottom */
+      table:first-of-type tbody tr:nth-child(1) td,
+      table:first-of-type tbody tr:nth-child(6) td {
         border-bottom: none;
       }
 
-      /* border indent: first table, 'Cholestrol' & 'Protein' rows */
-      table:first-of-type tbody tr:nth-of-type(5) td,
-      table:first-of-type tbody tr:nth-of-type(10) td {
+      /* border indent: first table, 'Cholestrol' & 'Protein' rows top */
+      table:first-of-type tbody tr:nth-child(4) td,
+      table:first-of-type tbody tr:nth-child(9) td {
         border-top: none;
       }
 
-      /* border indent: first table empty cells: Sat/Trans Fat, Fiber/Sugar */
-      table:first-of-type tbody tr:nth-of-type(3) td:first-child,
-      table:first-of-type tbody tr:nth-of-type(8) td:first-child {
+      /* border indent: first table empty cells by Sat/Trans Fat, Fiber/Sugar */
+      table:first-of-type tbody tr:nth-child(2) td:first-child,
+      table:first-of-type tbody tr:nth-child(7) td:first-child {
         border: none;
+        /* outline: 2px solid red; */
       }
 
       th, td {
@@ -92,7 +97,7 @@
       }
 
       /* Second Table Footer: '* Percent Daily Values ...' */
-      table:nth-of-type(2) tfoot td:last-of-type {
+      table:nth-of-type(2) tfoot td:last-child {
         padding: 1rem 0 1rem 1rem;
         font-size: 1.25rem;
         font-weight: normal;
@@ -123,25 +128,25 @@
     <table>
       <thead>
         <tr>
-          <th colspan="2">Amount Per Serving</th>
+          <th scope="col" colspan="2">Amount Per Serving</th>
           <th></th>
         </tr>
         <tr>
-          <td colspan="2"><strong>Calories</strong> 230</td>
+          <td scope="col" colspan="2"><strong>Calories</strong> 230</td>
           <td>Calories from Fat 40</td>
+        </tr>
+        <tr>
+          <th scope="col" colspan="2"></th>
+          <th>% Daily Value*</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th colspan="2"></th>
-          <th>% Daily Value*</th>
-        </tr>
         <tr>
           <td colspan="2"><strong>Total Fat</strong> 8g</td>
           <td><strong>12</strong>%</td>
         </tr>
         <tr>
-          <td rowspan="2">&nbsp;&nbsp;</td>
+          <td rowspan="2" colspan="1">&nbsp;&nbsp;</td>
           <td>Saturated Fat 1g</td>
           <td><strong>5</strong>%</td>
         </tr>
@@ -162,7 +167,7 @@
           <td><strong>12</strong>%</td>
         </tr>
         <tr>
-          <td rowspan="2">&nbsp;&nbsp;</td>
+          <td rowspan="2" colspan="1">&nbsp;&nbsp;</td>
           <td>Dietary Fiber 4g</td>
           <td><strong>16</strong>%</td>
         </tr>
@@ -206,10 +211,10 @@
     <table>
       <thead>
         <tr>
-          <th colspan="2"></th>
-          <th>Calories:</th>
-          <th>2,000</th>
-          <th>2,500</th>
+          <th scope="col" colspan="2"></th>
+          <th scope="col">Calories:</th>
+          <th scope="col">2,000</th>
+          <th scope="col">2,500</th>
         </tr>
       </thead>
       <tbody>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>title</title>
+    <meta charset="utf-8" />
+    <style>
+
+      form {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+
+      form * {
+        padding: 0;
+        margin: 0;
+      }
+
+      fieldset {
+        border: none;
+      }
+
+      label {
+        display: inline-block;
+        box-sizing: border-box;
+        margin-right: 0.5rem;
+        width: 7rem;
+      }
+
+      input[type="text"] {
+        display: inline-block;
+        box-sizing: border-box;
+        /* width: 80%; */
+      }
+
+    </style>
+  </head>
+  <body>
+    <p> 5. Add some placeholder text to the phone number input that shows the
+      format you expect to see. (For instance, ###-###-####.)
+    </p>
+
+    <form action="#" method="post">
+      <fieldset>
+        <dl>
+          <dt>
+            <label for="firstname">First Name</label>
+          </dt>
+          <dd>
+            <input type="text" id="firstname" name="firstname" required />
+          </dd>
+
+          <dt>
+            <label for="lastname">Last Name</label>
+          </dt>
+          <dd>
+            <input type="text" id="lastname" name="lastname" required />
+          </dd>
+
+          <dt>
+            <label for="email">Email</label>
+          </dt>
+          <dd>
+            <input type="email" id="email" name="email" required
+            autocomplete="off" autocorrect="off" autocapitalize="none"/>
+          </dd>
+
+          <dt>
+            <label for="telephone">Phone</label>
+          </dt>
+          <dd>
+            <input type="tel" id="telephone" name="telephone"
+            placeholder="###-###-####" required/>
+          </dd>
+          <dt>
+            <label for="phonetype">Phone Type</label>
+          </dt>
+          <dd>
+            <select name="phonetype" id="phonetype">
+              <option value="home" selected>Home</option>
+              <option value="business">Business</option>
+              <option value="mobile">Mobile</option>
+            </select>
+          </dd>
+          <dt>
+            <label for="message">Message:</label>
+          </dt>
+          <dd>
+            <textarea name="message" id="message" rows="6" cols="80"
+            placeholder="Type your message here..."></textarea>
+          </dd>
+        </dl>
+      </fieldset>
+
+      <fieldset>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

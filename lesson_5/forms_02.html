@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>title</title>
+    <meta charset="utf-8" />
+    <style>
+
+      form {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+
+      form * {
+        padding: 0;
+        margin: 0;
+      }
+
+      fieldset {
+        border: none;
+      }
+
+      label {
+        display: inline-block;
+        box-sizing: border-box;
+        margin-right: 0.5rem;
+        width: 7rem;
+      }
+
+      input[type="text"] {
+        display: inline-block;
+        box-sizing: border-box;
+        /* width: 80%; */
+      }
+
+    </style>
+  </head>
+  <body>
+    <p> 2. Convert the HTML from the previous problem to use a single
+      description list to pair each label and input control.</p>
+
+    <form action="#" method="post">
+      <fieldset>
+        <dl>
+          <dt>
+            <label for="firstname">First Name</label>
+          </dt>
+          <dd>
+            <input type="text" id="firstname" name="firstname" required />
+          </dd>
+
+          <dt>
+            <label for="lastname">Last Name</label>
+          </dt>
+          <dd>
+            <input type="text" id="lastname" name="lastname" required />
+          </dd>
+
+          <dt>
+            <label for="email">Email</label>
+          </dt>
+          <dd>
+            <input type="email" id="email" name="email" required
+            autocomplete="off" autocorrect="off" autocapitalize="none"/>
+          </dd>
+
+          <dt>
+            <label for="telephone">Phone</label>
+          </dt>
+          <dd>
+            <input type="tel" id="telephone" name="telephone" required />
+          </dd>
+        </dl>
+      </fieldset>
+
+      <fieldset>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

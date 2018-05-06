@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>11</title>
+    <meta charset="utf-8" />
+    <style>
+      fieldset {
+        border: none;
+      }
+
+      ul {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      11.Create a form that filters news articles by a single category and any
+      number of selected tag words. Use radio buttons for the news category and
+      checkboxes for the tags. Make sure you use the get method to allow the
+      user to save and share the filtered URL.
+    </p>
+
+    <ul>
+      <li>
+        Categories: Core, Plugins and Libraries, Conventions, Reviews, Opinion,
+        People
+      </li>
+      <li>
+        Tags: HTML, CSS, Javascript, Ruby, Rails, Python, Django
+      </li>
+    </ul>
+
+    <p>
+      For this problem, use the container-style label tag (without the for
+      attribute). Use an unordered list instead of a description list for both
+      the categories and tags.
+    </p>
+
+    <form action="#" method="get">
+      <fieldset>
+        <p>categories:</p>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="category" value="core" />
+              Core
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="category" value="plugins" />
+              Plugins and Libraries
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="category" value="conventions" />
+              Conventions
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="category" value="reviews" />
+              Reviews
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="category" value="opinion" />
+              Opinion
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="category" value="people" />
+              People
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <p>tags:</p>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" name="tag" value="html" />
+              HTML
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="tag" value="css" />
+              CSS
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="tag" value="javascript" />
+              Javascript
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="ruby" />
+              Ruby
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="rails" />
+              Rails
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="python" />
+              Python
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="django" />
+              Django
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <button type="submit">Filter</button>
+    </form>
+  </body>
+</html>

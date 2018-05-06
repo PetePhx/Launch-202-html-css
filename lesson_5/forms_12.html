@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>12</title>
+    <meta charset="utf-8" />
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      12. Convert the radios and checkboxes in the filter form to select lists.
+      Let the user select any number of tags, and ensure the selection box is
+      large enough that she can see several choices at once. Use description
+      lists to organize the form elements.
+    </p>
+
+    <form action="#" method="get">
+      <fieldset>
+        <dl>
+          <dt><label for="category">categories:</label></dt>
+          <dd>
+            <select name="category" id="category">
+              <option>Core</option>
+              <option>Plugins and Libraries</option>
+              <option>Conventions</option>
+              <option>Reviews</option>
+              <option>Opinion</option>
+              <option>People</option>
+            </select>
+          </dd>
+
+        <dt><label for="tags">tags:</label></dt>
+        <dd>
+          <select name="tags" id="tags" multiple size="7">
+            <option>HTML</option>
+            <option>Javascript</option>
+            <option>CSS</option>
+            <option>Ruby</option>
+            <option>Rails</option>
+            <option>Python</option>
+            <option>Django</option>
+          </select>
+        </dd>
+        <button type="submit">Filter</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

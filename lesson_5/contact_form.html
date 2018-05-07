@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>title</title>
+    <meta charset="utf-8" />
+    <style>
+      li {
+        margin: 1rem;
+      }
+
+      fieldset {
+        border: none;
+      }
+
+      fieldset > label {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      /* select {
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+      } */
+
+      /* select option[value="#f00"] {
+        color: #f00;
+      }
+      select option[value="#0f0"] {
+        color: #0f0;
+      }
+      select option[value="#00f"] {
+        color: #00f;
+      }
+      select option[value="#ff0"] {
+        color: #ff0;
+      }
+      select option[value="#f0f"] {
+        color: #f0f;
+      }
+      select option[value="#0ff"] {
+        color: #0ff;
+      } */
+
+    </style>
+  </head>
+  <body>
+    <ol>
+      <h1>Contact Form Assignment</h1>
+      <li>Create a web page that contains a contact form. Using your newly
+        acquired knowledge, create the label and input fields for a first name,
+        last name, email address, city, state, and zip code. Each input field
+        can appear on a separate line.</li>
+
+      <li>Assume that users are from the United States. The state select element
+        should contain each state's two-letter abbreviation as option options.
+        You don't need to add value attributes to the option elements; the form
+        can submit the two-letter abbreviations to the server. You saved a copy
+        of the list of states earlier, right?</li>
+
+      <li>Use the most appropriate input type for the email and zip code inputs,
+        along with a placeholder attribute that shows an example of a properly
+        formatted email address and Zip Code. (There is no "zipcode" input type;
+        use another input type.) Since Zip Codes always have five digits (we'll
+        ignore Zip+4), you should also set a maximum length for this input.</li>
+
+      <li>Add some inputs that will help you get to know your users better.
+        Begin with a question that asks "Which of these colors do you like
+        best?" and add a list of inputs to represent colors. Make sure you use
+        an input type that allows for precisely one color choice. Ensure that
+        the browser pre-selects the first color in the list when the page
+        loads.</li>
+
+      <li>Add another question that asks "Which web technologies do you want to
+        learn?" and add a list of inputs that allow the user to pick any number
+        of answers. Add some technologies (HTML, CSS, Javascript, Ruby, Rails,
+        etc.) to the list.</li>
+
+      <li>Add the most important part of a contact form: a comment box that
+        lets the user enter several lines or paragraphs of text. Be sure the
+        comment box displays up to around 6 rows and 80 columns of text but
+        also scrolls as needed if the user enters more than that.</li>
+
+      <li>When the user clicks the submit button, the browser should send a
+        timestamp to the server along with the other form data. Since we don't
+        have a way to determine the date with HTML and CSS alone, you can use a
+        constant value like today's date, e.g., 2018-02-17 (year-month-day).
+        The form should have an input tag for the timestamp, but the browser
+        should not display it to the user; you can use type="hidden" for this
+        control.</li>
+
+      <li>Add a submit input to create a button with the name Send. You should
+        also include a reset button so the user can clear the form and start
+        over.</li>
+
+      <li>Since we don't have an actual server that we can use, you can use the
+        action URL # in your form.</li>
+    </ol>
+
+    <form action="#" method="post">
+      <fieldset>
+        <label for="first_name">First Name</label>
+        <input type="text" name="first_name" id="first_name" placeholder="John"/>
+
+
+        <label for="last_name">Last Name</label>
+        <input type="text" name="last_name" id="last_name" placeholder="Doe"/>
+
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="me@example.com"/>
+
+
+        <label for="city">City</label>
+        <input type="text" name="city" id="city" placeholder="Chicago"/>
+
+        <label for="state">State</label>
+        <select name="state" id="state">
+          <option disabled selected></option>
+          <option>AK</option>
+          <option>AL</option>
+          <option>AR</option>
+          <option>AZ</option>
+          <option>CA</option>
+          <option>CO</option>
+          <option>CT</option>
+          <option>DC</option>
+          <option>DE</option>
+          <option>FL</option>
+          <option>GA</option>
+          <option>HI</option>
+          <option>IA</option>
+          <option>ID</option>
+          <option>IL</option>
+          <option>IN</option>
+          <option>KS</option>
+          <option>KY</option>
+          <option>LA</option>
+          <option>MA</option>
+          <option>MD</option>
+          <option>ME</option>
+          <option>MI</option>
+          <option>MN</option>
+          <option>MO</option>
+          <option>MS</option>
+          <option>MT</option>
+          <option>NC</option>
+          <option>ND</option>
+          <option>NE</option>
+          <option>NH</option>
+          <option>NJ</option>
+          <option>NM</option>
+          <option>NV</option>
+          <option>NY</option>
+          <option>OH</option>
+          <option>OK</option>
+          <option>OR</option>
+          <option>PA</option>
+          <option>RI</option>
+          <option>SC</option>
+          <option>SD</option>
+          <option>TN</option>
+          <option>TX</option>
+          <option>UT</option>
+          <option>VA</option>
+          <option>VT</option>
+          <option>WA</option>
+          <option>WI</option>
+          <option>WV</option>
+          <option>WY</option>
+        </select>
+
+        <label for="text">Zipcode</label>
+        <input type="text" name="zipcode" id="zipcode" placeholder="12345" maxlength="5"/>
+
+        <label for="color">Which of these colors do you like best?</label>
+        <!-- <select name="color" id="color">
+          <option value="#f00" selected>&#9608; <p>Red</p></option>
+          <option value="#0f0">&#9608; <p>Green</p></option>
+          <option value="#00f">&#9608; <p>Blue</p></option>
+          <option value="#0ff">&#9608; <p>Cyan</p></option>
+          <option value="#f0f">&#9608; <p>Magenta</p></option>
+          <option value="#ff0">&#9608; <p>Yellow</p></option>
+        </select> -->
+
+        <label>Which of these colors do you like best?
+          <label>
+            <input type="radio" name="color" value="#f00" checked/>
+            Red
+          </label>
+          <label>
+            <input type="radio" name="color" value="#0f0" />
+            Green
+          </label>
+          <label>
+            <input type="radio" name="color" value="#00f" />
+            Blue
+          </label>
+        </label>
+
+
+        <label for="webtechs">Which web technologies do you want to learn?
+          <label>
+            <input type="checkbox" name="webtechs" value="html"/>
+            HTML
+          </label>
+          <label>
+            <input type="checkbox" name="webtechs" value="css"/>
+            CSS
+          </label>
+          <label>
+            <input type="checkbox" name="webtechs" value="javascript"/>
+            Javascript
+          </label>
+          <label>
+            <input type="checkbox" name="webtechs" value="ruby"/>
+            Ruby
+          </label>
+          <label>
+            <input type="checkbox" name="webtechs" value="rails"/>
+            Rails
+          </label>
+        </label>
+
+        <label for="comment">Send us your feedback:</label>
+        <textarea id="comment" name="comment" cols="80" rows="6"
+        placeholder="Your comment goes here..."></textarea>
+
+        <input type="hidden" name="date" value="2018-05-07">
+        <br />
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

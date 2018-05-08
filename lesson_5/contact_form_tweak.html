@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Form</title>
+    <meta charset="utf-8" />
+    <style>
+
+      html {
+        font-size: 16px;
+      }
+
+      body {
+        font: normal 16px helvetica, arial, sans-serif;
+        max-width: 50rem;
+        margin: auto;
+        /* outline: 1px solid red; */
+      }
+
+      ol {
+        width: 100%;
+        padding: 0;
+        /* outline: 1px solid red; */
+      }
+
+      ol li {
+        margin: 1rem;
+      }
+
+      dd {
+        margin-left: 0;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+        /* outline: 1px solid red; */
+      }
+
+      ul li {
+        margin: 0.5rem 0;
+      }
+
+      fieldset {
+        padding: 0;
+        border: none;
+        margin: 1rem 0;
+      }
+
+      dl {
+        display: inline-block;
+        box-sizing: border-box;
+      }
+
+      .first_name, .last_name {
+        width: 50%;
+      }
+      .first_name {
+        padding-right: 1rem;
+      }
+
+      .email {
+        width: 100%;
+      }
+
+      .city {
+        width: 50%;
+        padding-right: 1rem;
+      }
+      .state {
+        width: 10%;
+      }
+      .zipcode {
+        width: 40%;
+      }
+
+      fieldset > label {
+        /* display: block; */
+        margin: 1rem 0 0.25rem 0;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      textarea {
+        box-sizing: border-box;
+        width: 100%;
+        height: 2rem;
+        padding: 0 0.5rem;
+      }
+
+      textarea {
+        height: auto;
+        resize: vertical;
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <h1>Tweaking the Contact Form</h1>
+      <li>Since we want to treat each input in the form differently, we should
+        use separate description lists for each field. Adjust the HTML to use a
+        description list to pair the label and input elements.</li>
+
+      <li>Put the first and last name fields on the same line. Each of the
+        inputs should take up 50% of the form's width, counting any padding or
+        margins.</li>
+
+      <li>Put the final three address fields on the same line. The city should
+        consume 50% of the available width, the state 10%, and the zip code
+        40%.</li>
+    </ol>
+
+    <form action="#" method="post">
+      <fieldset>
+
+        <dl class="first_name">
+          <dt><label for="first_name">First Name</label></dt>
+          <dd>
+            <input type="text" name="first_name" id="first_name" placeholder="John"/>
+          </dd>
+        </dl><!--
+
+      --><dl class="last_name">
+          <dt><label for="last_name">Last Name</label></dt>
+          <dd>
+            <input type="text" name="last_name" id="last_name" placeholder="Doe"/>
+          </dd>
+        </dl>
+
+        <dl class="email">
+          <dt><label for="email">Email</label></dt>
+          <dd>
+            <input type="email" name="email" id="email" placeholder="me@example.com"/>
+          </dd>
+        </dl>
+
+        <dl class="city">
+          <dt><label for="city">City</label></dt>
+          <dd>
+            <input type="text" name="city" id="city" placeholder="Chicago"/>
+          </dd>
+        </dl><!--
+
+      --><dl class="state">
+          <dt><label for="state">State</label><dt>
+          <dd>
+            <select name="state" id="state">
+              <option disabled selected></option>
+              <option>AK</option><option>AL</option><option>AR</option><option>AZ</option>
+              <option>CA</option><option>CO</option><option>CT</option><option>DC</option>
+              <option>DE</option><option>FL</option><option>GA</option><option>HI</option>
+              <option>IA</option><option>ID</option><option>IL</option><option>IN</option>
+              <option>KS</option><option>KY</option><option>LA</option><option>MA</option>
+              <option>MD</option><option>ME</option><option>MI</option><option>MN</option>
+              <option>MO</option><option>MS</option><option>MT</option><option>NC</option>
+              <option>ND</option><option>NE</option><option>NH</option><option>NJ</option>
+              <option>NM</option><option>NV</option><option>NY</option><option>OH</option>
+              <option>OK</option><option>OR</option><option>PA</option><option>RI</option>
+              <option>SC</option><option>SD</option><option>TN</option><option>TX</option>
+              <option>UT</option><option>VA</option><option>VT</option><option>WA</option>
+              <option>WI</option><option>WV</option><option>WY</option>
+            </select>
+          </dd>
+        </dl><!--
+
+     --><dl class="zipcode">
+          <dt><label for="text">Zipcode</label></dt>
+          <dd>
+            <input type="number" name="zipcode" id="zipcode" placeholder="12345"
+            min="0" max="99999" maxlength="5"/>
+          </dd>
+        </dl>
+
+          <ul>
+            <label for="color">Which of these colors do you like best?</label>
+            <li>
+              <label>
+                <input type="radio" name="color" value="#f00" checked/>
+                Red
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="color" value="#0f0" />
+                Green
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="color" value="#00f" />
+                Blue
+              </label>
+          </li>
+        </ul>
+
+        <ul>
+          <label for="webtechs">Which web technologies do you want to learn?</label>
+          <li>
+            <label>
+              <input type="checkbox" name="webtechs" value="html"/>
+              HTML
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="webtechs" value="css"/>
+              CSS
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="webtechs" value="javascript"/>
+              Javascript
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="webtechs" value="ruby"/>
+              Ruby
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="webtechs" value="rails"/>
+              Rails
+            </label>
+          </li>
+        </ul>
+
+        <label for="comment">Send us your feedback:</label>
+        <textarea id="comment" name="comment" cols="80" rows="6"
+        placeholder="Your comment goes here..."></textarea>
+
+        <input type="hidden" name="date" value="2018-05-07">
+        <br />
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

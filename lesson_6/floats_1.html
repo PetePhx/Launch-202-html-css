@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>title</title>
+    <meta charset="utf-8" />
+    <style>
+      html {
+        font: normal 16px helvetica, arial, sans-serif;
+      }
+
+      html * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        padding: 1rem 2rem;
+        background-color: rgb(225, 225, 225);
+      }
+
+      li {
+        padding: 1rem 0;
+      }
+
+      p {
+        padding:0 0 1rem 0;
+      }
+
+      p:last-child {
+        padding-bottom: 0;
+      }
+
+      section {
+        /* width: 750px; */
+        max-width: 1000px;
+        margin: auto;
+        overflow: hidden;
+        background-color: rgb(180, 180, 180);
+      }
+
+      article,
+      aside,
+      footer {
+        box-sizing: border-box;
+        padding: 1rem;
+      }
+
+      article {
+        width: 70%;
+        float: left;
+        background-color: rgb(240, 240, 200);
+      }
+
+      aside {
+        float: none;
+        overflow: hidden;
+        /* width: 250px; */
+        /* float: right; */
+        background-color: rgb(200, 255, 200);
+      }
+
+      footer {
+        float: left;
+        width: 100%;
+        background: rgb(170, 255, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>
+        Create a section element with a fixed width of 750px, and horizontally
+        center it on the page using CSS margins. Create two columns inside it,
+        a 500px-wide article and a 250px-wide aside, positioned side-by-side
+        with CSS floats. The left column should contain the article. Each column
+        should have 1rem of whitespace between the text and edges of the
+        container. Add some background colors to the body, section, article,
+        and aside body so you can see the boundaries of each element.
+      </li>
+      <li>
+        If necessary, add some more text to the article to ensure it is
+        noticeably taller than the aside. Can you see the background color
+        you set on the section element? Why not? What can you add to your
+        CSS to fix it?
+      </li>
+      <li>
+        Remove the fixed width of 750px from the section and set a maximum
+        width of 1000px instead. Modify the right column to take up the
+        remainder of the space without floating the column or giving it a
+        specific width.
+      </li>
+      <li>
+        Change the left column from a fixed width to a variable width of 70%
+        of the parent's width.
+      </li>
+      <li>
+        Add a footer below the two columns.
+      </li>
+    </ol>
+    <section>
+      <article>
+        <p>
+        Praesent lobortis nisi non auctor lobortis. Nam vel nibh sapien.
+        Aliquam aliquet est et nulla cursus condimentum. Cras rhoncus blandit
+        quam, id dictum erat ultrices quis. Etiam aliquam dui at volutpat
+        congue. Cras egestas erat sed purus venenatis ultrices. Integer diam
+        ex, luctus sed nulla non, consequat blandit lectus. Duis mollis
+        eleifend erat a ornare. Nullam turpis justo, dictum nec ex sed,
+        commodo viverra massa.
+        </p>
+
+        <p>
+        Maecenas et ante lorem. Etiam commodo arcu erat, vel lobortis dolor
+        mollis vitae. Cras eget lorem at lacus commodo tincidunt. Mauris
+        commodo lobortis neque, sed luctus tortor aliquam vitae. Morbi congue
+        sollicitudin arcu nec feugiat. Morbi ut nisl pretium, molestie dolor
+        sit amet, malesuada dolor. Sed faucibus nunc et ante tincidunt
+        sodales nec in augue. Sed vel tempus eros. Nulla feugiat libero vel
+        vehicula blandit. Nullam risus ligula, ornare vitae lobortis eu,
+        placerat non velit. Nullam facilisis quis tortor nec dapibus.
+        Praesent eget efficitur erat. Nunc ut nisl nec dui semper porttitor
+        a et metus. Maecenas iaculis arcu sit amet magna gravida condimentum.
+        </p>
+
+        <p>
+        Phasellus velit libero, eleifend id nisi eu, porta maximus erat.
+        Suspendisse vestibulum leo sit amet odio semper, vitae efficitur
+        urna dictum. Integer mattis imperdiet nibh. Vivamus nunc arcu,
+        consectetur ac tortor sit amet, commodo finibus metus. Aenean
+        placerat dictum lacus, quis suscipit tellus. Etiam dui augue,
+        iaculis sit amet rutrum quis, posuere sed urna. Suspendisse potenti.
+        Nunc mattis, sapien vestibulum consectetur sodales, eros enim rutrum
+        enim, vitae lacinia neque ante sit amet velit. Duis venenatis a urna
+        non auctor. Nulla bibendum est eros, ac suscipit massa viverra non.
+        Nulla rutrum tincidunt lectus et rhoncus. Praesent sit amet justo
+        justo. Proin eleifend sodales elit in facilisis. Lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Nunc sit amet bibendum lectus.
+        Nulla tincidunt nisl ante, sed accumsan nulla varius vitae.
+        </p>
+
+        <p>
+        Mauris eleifend ligula sit amet mi dapibus blandit. Aliquam ipsum
+        sapien, elementum vitae sapien a, faucibus eleifend erat. Sed eu
+        massa eget est vehicula placerat id at ex. In in sapien eu justo
+        commodo dictum non ut est. Nam scelerisque mauris sit amet leo
+        porttitor, vel venenatis tellus tincidunt. Nunc lacinia, libero
+        ac dignissim finibus, ex nisi aliquet justo, eget vulputate mauris
+        augue nec metus. Nullam sit amet tellus ut turpis ultrices rhoncus.
+        </p>
+
+        <p>
+        Nunc imperdiet imperdiet mi, non laoreet sem cursus faucibus. Donec
+        pellentesque finibus magna quis euismod. Quisque aliquam risus dolor,
+        vitae commodo tortor ornare ac. Donec ultrices commodo tortor non
+        dictum. Vestibulum ante ipsum primis in faucibus orci luctus et
+        ultrices posuere cubilia Curae; Cras ornare justo vel turpis
+        vestibulum, at vulputate sapien tempor. In vitae ullamcorper arcu.
+        </p>
+      </article>
+      <aside>
+        <p>
+          Aenean gravida feugiat diam, nec dapibus felis lobortis vitae. Nunc
+          nec augue sit amet nulla pharetra dignissim. Quisque nec iaculis
+          mauris. Quisque tincidunt neque pellentesque ligula rutrum, ut
+          pulvinar quam consequat. Duis id est justo. Donec justo turpis,
+          ullamcorper nec libero id, ultrices tempus metus. In non dictum
+          mauris. Vestibulum quis tincidunt augue, eget interdum arcu. Donec
+          vulputate mattis facilisis. Aenean consectetur eget ante ut
+          hendrerit. Sed et augue ut lacus dictum consectetur eget eu enim.
+          Nunc a metus viverra, tincidunt ligula vitae, ultrices augue.
+        </p>
+
+        <p>
+          In scelerisque tincidunt nulla vitae congue. Nam eget vehicula
+          elit, ut laoreet nibh. Praesent bibendum tincidunt blandit. Sed
+          et mollis eros. Ut tortor diam, tincidunt id elit nec, pharetra
+          tincidunt nisl. Donec iaculis orci eget molestie malesuada. Nulla
+          dignissim, massa vel ornare ultricies, nunc justo suscipit magna,
+          vitae sollicitudin dolor nisi ac massa. Aliquam id tellus sit amet
+          elit tempor vehicula laoreet sed nibh. Ut bibendum suscipit felis,
+          sagittis ultricies diam laoreet at.
+        </p>
+      </aside>
+      <footer>
+        Vivamus ullamcorper tristique massa, eu egestas erat tincidunt
+        consectetur. Donec rhoncus imperdiet nibh, in ornare enim cursus a.
+        Suspendisse cursus varius iaculis. Maecenas a elit odio. Pellentesque
+        eu rutrum metus. Proin eu purus lacinia, feugiat mi nec, tristique
+        justo. Mauris elementum pretium metus vitae pulvinar. Sed ac porta mi,
+        eu euismod lorem.
+      </footer>
+    </section>
+  </body>
+</html>

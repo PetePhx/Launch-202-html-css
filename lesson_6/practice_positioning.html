@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>title</title>
+    <meta charset="utf-8" />
+    <style>
+      html {
+        font: normal 16px sans-serif;
+      }
+
+      h1 {
+        margin-top: 6rem;
+      }
+
+      #positioned {
+        /* position: absolute; */
+        position: fixed;
+        top: 0;
+        /* right: 0; */
+        background-color: rgb(255, 255, 200);
+        padding: 2rem 4rem;
+        font: normal 1.25rem sans-serif;
+        text-align: center;
+        width: 15rem;
+        right: 0;
+        left: 0;
+        margin:1rem auto;
+        z-index: 3;
+      }
+
+      #darklayer {
+        background-color: rgba(0, 0, 0, .6);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      #littleguy {
+        background-color: pink;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Practice Problems: Positioning</h1>
+      <p>
+        For these problems, create a simple HTML page with a few paragraphs of
+        text. You should have enough content that you must scroll the browser
+        window to read the bottommost content; you can also shorten the window
+        height if you prefer. If you add any elements to the page, add them after
+        the paragraph elements.
+      </p>
+
+      <ol>
+        <li>
+          <p>Starting with a new document, create an element and position it at the
+          top right of the page. It should scroll with the rest of the window
+          when you scroll.</p>
+        </li>
+        <li>
+          <p>Change the element to remain in the top right of the viewport when the
+          window scrolls.</p>
+        </li>
+        <li>
+          <p>Set the element's width to 400px and center it horizontally. Centering
+          positioned elements is tricky, so feel free to check the hints and use
+          Google.</p>
+        </li>
+        <li>
+          <p>Place a new element between the page contents and the yellow item; by
+          between, we mean in a 3D sense. Consider the page content to be at the
+          bottom of a stack and the yellow at the top; place the new element
+          between the two.</p>
+
+          <p>The new element should take up the full width and height of the page.
+          Use the CSS below to get started; note that it sets the background to
+          a translucent color. The new element should fill the browser's entire
+          window, and it should appear in front of the paragraphs but behind
+          the yellow box.</p>
+        </li>
+        <li>
+          <p>Create a new element inside the #positioned container. Starting with
+          the CSS below, move the new item partially outside the parent's
+          boundaries by 10px to the left and top. To ensure you can see
+          everything, move the parent element down from the top of the page.</p>
+        </li>
+      </ol>
+      <p>lorem ipsum bullschet:</p>
+      <p>
+      Praesent lobortis nisi non auctor lobortis. Nam vel nibh sapien.
+      Aliquam aliquet est et nulla cursus condimentum. Cras rhoncus blandit
+      quam, id dictum erat ultrices quis. Etiam aliquam dui at volutpat
+      congue. Cras egestas erat sed purus venenatis ultrices. Integer diam
+      ex, luctus sed nulla non, consequat blandit lectus. Duis mollis
+      eleifend erat a ornare. Nullam turpis justo, dictum nec ex sed,
+      commodo viverra massa.
+      </p>
+
+      <p>
+      Maecenas et ante lorem. Etiam commodo arcu erat, vel lobortis dolor
+      mollis vitae. Cras eget lorem at lacus commodo tincidunt. Mauris
+      commodo lobortis neque, sed luctus tortor aliquam vitae. Morbi congue
+      sollicitudin arcu nec feugiat. Morbi ut nisl pretium, molestie dolor
+      sit amet, malesuada dolor. Sed faucibus nunc et ante tincidunt
+      sodales nec in augue. Sed vel tempus eros. Nulla feugiat libero vel
+      vehicula blandit. Nullam risus ligula, ornare vitae lobortis eu,
+      placerat non velit. Nullam facilisis quis tortor nec dapibus.
+      Praesent eget efficitur erat. Nunc ut nisl nec dui semper porttitor
+      a et metus. Maecenas iaculis arcu sit amet magna gravida condimentum.
+      </p>
+
+      <p>
+      Phasellus velit libero, eleifend id nisi eu, porta maximus erat.
+      Suspendisse vestibulum leo sit amet odio semper, vitae efficitur
+      urna dictum. Integer mattis imperdiet nibh. Vivamus nunc arcu,
+      consectetur ac tortor sit amet, commodo finibus metus. Aenean
+      placerat dictum lacus, quis suscipit tellus. Etiam dui augue,
+      iaculis sit amet rutrum quis, posuere sed urna. Suspendisse potenti.
+      Nunc mattis, sapien vestibulum consectetur sodales, eros enim rutrum
+      enim, vitae lacinia neque ante sit amet velit. Duis venenatis a urna
+      non auctor. Nulla bibendum est eros, ac suscipit massa viverra non.
+      Nulla rutrum tincidunt lectus et rhoncus. Praesent sit amet justo
+      justo. Proin eleifend sodales elit in facilisis. Lorem ipsum dolor
+      sit amet, consectetur adipiscing elit. Nunc sit amet bibendum lectus.
+      Nulla tincidunt nisl ante, sed accumsan nulla varius vitae.
+      </p>
+
+      <p>
+      Mauris eleifend ligula sit amet mi dapibus blandit. Aliquam ipsum
+      sapien, elementum vitae sapien a, faucibus eleifend erat. Sed eu
+      massa eget est vehicula placerat id at ex. In in sapien eu justo
+      commodo dictum non ut est. Nam scelerisque mauris sit amet leo
+      porttitor, vel venenatis tellus tincidunt. Nunc lacinia, libero
+      ac dignissim finibus, ex nisi aliquet justo, eget vulputate mauris
+      augue nec metus. Nullam sit amet tellus ut turpis ultrices rhoncus.
+      </p>
+
+      <p>
+      Nunc imperdiet imperdiet mi, non laoreet sem cursus faucibus. Donec
+      pellentesque finibus magna quis euismod. Quisque aliquam risus dolor,
+      vitae commodo tortor ornare ac. Donec ultrices commodo tortor non
+      dictum. Vestibulum ante ipsum primis in faucibus orci luctus et
+      ultrices posuere cubilia Curae; Cras ornare justo vel turpis
+      vestibulum, at vulputate sapien tempor. In vitae ullamcorper arcu.
+      </p>
+    </section>
+
+    <div id="positioned">
+      I'm Positioned! lol
+      <div id="littleguy"></div>
+    </div>
+
+    <div id="darklayer"></div>
+
+  </body>
+</html>

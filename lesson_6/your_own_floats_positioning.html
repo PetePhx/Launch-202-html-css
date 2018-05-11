@@ -8,7 +8,15 @@
         font: normal 16px helvetica, arial, sans-serif;
       }
 
-      /* html * {} */
+      /* body {
+        font-size: 16px;
+      } */
+
+      html * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
 
       article {
         box-sizing: border-box;
@@ -27,7 +35,7 @@
 
       h1 {
         font-size: 1.5rem;
-        margin: 1.5rem 0;
+        margin: 1rem 0;
       }
 
       h2 {
@@ -42,6 +50,7 @@
 
       p {
         line-height: 2;
+        margin: 1.5rem 0;
       }
 
       a {
@@ -49,12 +58,87 @@
         color: inherit;
       }
 
+      a.block {
+        display: block;
+        /* height: 3rem; */
+        margin: 1rem 0;
+        padding: 1rem;
+      }
+
+      ul {
+        margin-left: 4rem;
+        line-height: 1.5;
+      }
+
+      div {
+        text-align: center;
+      }
+
       div.dash-border {
         border: 2px dashed rgb(80, 80, 80);
         padding: 2rem;
         margin: 3rem;
-        max-width: 35rem;
+        max-width: 38rem;
         overflow: hidden;
+      }
+
+      .blue-bg {
+        color: white;
+        background-color: rgb(25, 150, 255);
+      }
+
+      .green-bg {
+        color: white;
+        background-color: rgb(0, 128, 0);
+      }
+
+      .tomato-bg {
+        color: white;
+        background-color: tomato;
+      }
+
+      .pink-bg {
+        color: white;
+        background-color: pink;
+      }
+
+      div.hmp-3p75-1p25 {
+        height: 3.75rem;
+        margin: 1.25rem;
+        padding: 1.25rem;
+      }
+
+      div.w-5p5 {
+        width: 5.5rem;
+      }
+
+      div.wh-11-6 {
+        width: 11rem;
+        height: 6rem;
+      }
+
+      div.float-container {
+        overflow: hidden;
+      }
+
+      div.float-left {
+        float: left;
+      }
+
+      div.float-right {
+        float: right;
+      }
+
+      div.w-50pc {
+        width: 50%;
+        height: 4rem;
+        padding: 1.5rem;
+      }
+
+      div.w-40pc {
+        width: 40%;
+        height: 4rem;
+        padding: 1.5rem;
       }
 
       a.inline-margin {
@@ -71,6 +155,20 @@
         float: left;
       }
 
+      ul.nav {
+        font-size: 0;
+        list-style: none;
+        padding: 2rem, 4rem;
+      }
+
+      li.nav {
+        display: inline-block;
+        width: 20%;
+        font-size: 1rem;
+        margin: 1rem;
+        padding: 1rem 2rem;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -140,82 +238,120 @@
 
         <h2>Example</h2>
 
-        `div` elements are block-level.
+        <p><code>div</code> elements are block-level.<p>
 
-        This div has no explicit width or height.
+        <div class="blue-bg">This div has no explicit width or height.</div>
 
-        Without an explicit width or height, the box fills the entire width and uses as much height as it needs to fit the content.
+        <p>Without an explicit width or height, the box fills the entire width
+          and uses as much height as it needs to fit the content.</p>
 
-        This div has no explicit width but a height of 60px; it also has both padding and margins of 20px on all sides.
+        <div class="green-bg hmp-3p75-1p25">
+          This <code>div</code> has no explicit width but a
+          height of 60px; it also has both padding and margins of 20px on all
+          sides.</div>
 
-        With an explicit height of 60px plus margins and padding, the box still fills the entire width (including the padding and margins), but now requires the requested height.
+        <p>With an explicit height of 60px plus margins and padding, the box
+          still fills the entire width (including the padding and margins), but
+          now requires the requested height.</p>
 
-        This div has a width of 90px and no explicit height.
+        <div class="tomato-bg w-5p5">
+          This div has a width of 90px and no explicit height.
+        </div>
 
-        With an explicit width of 90px, the box collapses down to 90px width but expands the height to ensure the text still fits.
+        <p>With an explicit width of 90px, the box collapses down to 90px width
+          but expands the height to ensure the text still fits.</p>
 
-        This div has a width of 180px and a height of 75px; it also has both padding and margins of 20px on all sides.
+        <div class="pink-bg wh-11-6">
+          This div has a width of 180px and a height of 75px; it also has
+          both padding and margins of 20px on all sides.
+        </div>
 
-        With an explicit width of 180px and height of 75px, the box takes on the requested dimensions. However, the content can overflow the box as it does here.
+        <p>With an explicit width of 180px and height of 75px, the box takes on
+          the requested dimensions. However, the content can overflow the box
+          as it does here.</p>
 
-        Floating Block Elements
+        <h2>Floating Block Elements</h2>
 
-        Floating block elements with no width or height
+        <h3>Floating block elements with no width or height</h3>
 
-        Box - 1 - Floated Left
-        Box - 2 - Floated Right
+        <div class="float-container">
+          <div class="blue-bg float-left">Box - 1 - Floated Left</div>
+          <div class="tomato-bg float-right">Box - 2 - Floated Right</div>
+        </div>
 
-        Floated block-level elements that don't have a width collapse down to the width required by the content. Thus, multiple floated blocks can fit on the same line as shown above where we float one item left and the other right.
+        <p>Floated block-level elements that don't have a width collapse down to
+          the width required by the content. Thus, multiple floated blocks can
+          fit on the same line as shown above where we float one item left and
+          the other right.</p>
 
-        Floating block elements with width and height set.
+        <h3>Floating block elements with width and height set.</h3>
 
-        Box - 1 - Floated Left
-        Box - 2 - Floated Right
+        <div class="float-container">
+          <div class="float-left w-40pc tomato-bg">Box - 1 - Floated Left</div>
+          <div class="float-right w-50pc blue-bg">Box - 2 - Floated Right</div>
+        </div>
 
-        When you specify the widths on floated block-level elements, the browser will observe the widths. In the above example, our blocks have widths of 40% and 50%.
+        <p>When you specify the widths on floated block-level elements, the
+          browser will observe the widths. In the above example, our blocks
+          have widths of 40% and 50%.</p>
 
-        Can we change an inline element into a block element?
+        <h3>Can we change an inline element into a block element?</h3>
 
-        Let's use the anchor tag as an example.
+        <p>Let's use the anchor tag as an example.</p>
 
-          Home
-          About
-          Contact
+        <div>
+          <a href="#" class="block blue-bg">Home</a>
+          <a href="#" class="block blue-bg">About</a>
+          <a href="#" class="block blue-bg">Contact</a>
+        </div>
 
-        Yes, we can change a block element to an inline and vice versa. You can change the display property regardless of the previous value.
+        <p>Yes, we can change a block element to an inline and vice versa. You
+          can change the display property regardless of the previous value.</p>
       </section>
       <section>
-        Inline-Block Elements
+        <h1>Inline-Block Elements</h1>
 
-        Inline-block elements are inline elements that take on most block element properties, such as width and height.
+        <p>Inline-block elements are inline elements that take on most block
+          element properties, such as width and height.</p>
 
-        Example
+        <h2>Example</h2>
 
-        Let's use `inline-block` to create a navigation bar:
+        <p>Let's use <code>inline-block</code> to create a navigation bar:</p>
 
-          Home
-          Portfolio
-          About
-          Contact
+        <ul class="nav">
+          <li class="nav blue-bg">Home</li>
+          <li class="nav blue-bg">Portfolio</li>
+          <li class="nav blue-bg">About</li>
+          <li class="nav blue-bg">Contact</li>
+        </ul>
 
-        We achieved similar results when we floated the anchor elements. It's as though you get two elements in one: you have the flow properties of inline elements combined with most properties of block elements.
+        <p>We achieved similar results when we floated the anchor elements.
+          It's as though you get two elements in one: you have the flow
+          properties of inline elements combined with most properties of block
+          elements.</p>
       </section>
       <section>
         <h1>Floats and Positioning Elements</h1>
 
-        Floats
+        <h2>Floats</h2>
 
-        The browser removes floated elements from the normal flow. Floated elements automatically become block-level elements with change: two or more floated elements can fit on the same line.
+        <p>The browser removes floated elements from the normal flow. Floated
+          elements automatically become block-level elements with change: two
+          or more floated elements can fit on the same line.</p>
 
-        Example
+        <h2>Example</h2>
 
           Box 1
           Box-2
           Box-3
 
-        Elements that follow a floated element wrap around it. However, we don't want this behavior above, so we applied clear:both` property to the third `div`. There are two other values for `clear`, `left` and `right`, but we typically want `both.
+        <p>Elements that follow a floated element wrap around it. However, we
+          don't want this behavior above, so we applied clear:both` property to
+          the third `div`. There are two other values for `clear`, `left` and
+          `right`, but we typically want `both.</p>
 
-        There are other ways to clear floats. One technique is the clearfix method:
+        <p>There are other ways to clear floats. One technique is the clearfix
+          method:</p>
 
           elementName::after {
             content: " ";
@@ -223,44 +359,67 @@
             clear: both;
           }
 
-        Here we append the ::after pseudo-element to the parent element's selector.
+        <p>Here we append the ::after pseudo-element to the parent element's
+          selector.</p>
 
-        Positioning
+        <h1>Positioning</h1>
 
-        We sometimes want to position elements at specific locations on the page. The normal page flow and floats can't do this with the precision we often want. We can use CSS positioning in this case. There are four positioning types:
+        <p>We sometimes want to position elements at specific locations on the
+          page. The normal page flow and floats can't do this with the
+          precision we often want. We can use CSS positioning in this case.
+          There are four positioning types:</p>
 
-          Static
-          Fixed
-          Relative
-          Absolute
+          <ul>
+            <li><em>Static</em></li>
+            <li><em>Fixed</em></li>
+            <li><em>Relative</em></li>
+            <li><em>Absolute</em></li>
+          </ul>
 
-        Static Positioning
+        <h2>Static Positioning</h2>
 
-        The element renders at its normal position on the page. That is, the browser uses the standard page flow. All elements default tom static positioning.
+        <p>The element renders at its normal position on the page. That is, the
+          browser uses the standard page flow. All elements default tom static
+          positioning.</p>
 
-        Fixed Positioning
+        <h2>Fixed Positioning</h2>
 
-        Lets you place an element at a fixed position in the browser window; it will remain in place even when you scroll the page. You need the top`, `bottom`, `right`, and `left properties to position the element.
+        <p>Lets you place an element at a fixed position in the browser window;
+          it will remain in place even when you scroll the page. You need the
+          top`, `bottom`, `right`, and `left properties to position the
+          element.</p>
 
-        The browser removes elements with fixed positioning from the page flow. It does not leave a gap in the location where the browser would have positioned it otherwise.
+        <p>The browser removes elements with fixed positioning from the page
+          flow. It does not leave a gap in the location where the browser
+          would have positioned it otherwise.</p>
 
-        The blue box on the bottom-left corner of the page is a fixed position element.
+        <p>The blue box on the bottom-left corner of the page is a fixed
+          position element.</p>
 
         I use fixed positioning.
 
-        Relative Positioning
+        <h2>Relative Positioning</h2>
 
-        Relative positioning positions an element at a location relative to its normal position. Unlike fixed positioning, relative positioning does not remove an element from the page flow; in fact, you can observe a gap in the flow indicating the original position.
+        <p>Relative positioning positions an element at a location relative to
+          its normal position. Unlike fixed positioning, relative positioning
+          does not remove an element from the page flow; in fact, you can
+          observe a gap in the flow indicating the original position.</p>
 
         I use relative positioning.
 
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cumque repellat sapiente vitae nihil debitis accusamus, odit, tempore id reiciendis consequatur necessitatibus veritatis, distinctio vel, cum repellendus numquam blanditiis perferendis?
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cumque
+          repellat sapiente vitae nihil debitis accusamus, odit, tempore id
+          reiciendis consequatur necessitatibus veritatis, distinctio vel,
+          cum repellendus numquam blanditiis perferendis?</p>
 
-        Absolute Positioning
+        <h2>Absolute Positioning</h2>
 
-        Absolute positioning removes an element from the normal page flow and positions it at an absolute position relative to its parent element. If the parent element is the `<body>`, the position is absolute relative to the complete page.
+        <p>Absolute positioning removes an element from the normal page flow
+          and positions it at an absolute position relative to its parent
+          element. If the parent element is the `&lt;body&gt;`, the position is
+            absolute relative to the complete page.</p>
 
-        The green box shows uses absolute positioning.
+        <p>The green box shows uses absolute positioning.</p>
 
         I use absolute positioning.
       </section>

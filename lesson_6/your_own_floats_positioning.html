@@ -38,6 +38,13 @@
         margin: 1rem 0;
       }
 
+      #floats-header {
+        text-align: center;
+        /* line-height: 6; */
+        padding: 2rem 0 0 0;
+        border-top: 2px dashed grey;
+      }
+
       h2 {
         font-size: 1.25rem;
         margin: 1.25rem 0;
@@ -141,6 +148,19 @@
         padding: 1.5rem;
       }
 
+      #float-box-1,
+      #float-box-2 {
+        height: auto;
+        padding: 3rem;
+        font-weight: bold;
+      }
+
+      #float-box-3 {
+        width: 100%;
+        padding: 1.5rem;
+        font-weight: bold;
+      }
+
       a.inline-margin {
         margin: 30px;
       }
@@ -168,6 +188,43 @@
         margin: 1rem;
         padding: 1rem 2rem;
         text-align: center;
+      }
+
+      #relative-section {
+        position: relative;
+        left: 0;
+        top: 0;
+      }
+
+      #fissed {
+        position: fixed;
+        bottom: 2rem;
+        left: 2rem;
+        padding: 1rem 4rem;
+        border-radius: 1rem;
+        opacity: 0.9;
+        font-size: 1.5rem;
+        max-width: 20rem;
+      }
+
+      #relative {
+        position: relative;
+        padding: 2rem 4rem;
+        border-radius: 1rem;
+        max-width: 25rem;
+        right: 6rem;
+        top: 2rem;
+        font-size: 1.5rem;
+      }
+
+      #absolute {
+        position: absolute;
+        border-radius: 1rem;
+        left: 15rem;
+        bottom: 7rem;
+        max-width: 20rem;
+        padding: 1rem 4rem;
+        font-size: 1.5rem;
       }
     </style>
   </head>
@@ -331,7 +388,7 @@
           elements.</p>
       </section>
       <section>
-        <h1>Floats and Positioning Elements</h1>
+        <h1 id="floats-header">Floats and Positioning Elements</h1>
 
         <h2>Floats</h2>
 
@@ -341,27 +398,35 @@
 
         <h2>Example</h2>
 
-          Box 1
-          Box-2
-          Box-3
+        <div class="float-container">
+          <div id="float-box-1" class="float-left w-50pc tomato-bg">Box-1</div>
+          <div id="float-box-2" class="float-right w-50pc blue-bg">Box-2</div>
+          <div id="float-box-3" class="float-left green-bg">Box-3</div>
+        </div>
 
         <p>Elements that follow a floated element wrap around it. However, we
-          don't want this behavior above, so we applied clear:both` property to
-          the third `div`. There are two other values for `clear`, `left` and
-          `right`, but we typically want `both.</p>
+          don't want this behavior above, so we applied <code>clear:both</code>
+          property to the third <code>div</code>. There are two other values for
+          <code>clear</code>, <code>left</code> and <code>right</code>, but we
+          typically want <code>both</code>.</p>
 
         <p>There are other ways to clear floats. One technique is the clearfix
           method:</p>
 
-          elementName::after {
-            content: " ";
-            display:block;
-            clear: both;
-          }
+        <pre>
+          <code>
+            elementName::after {
+              content: " ";
+              display:block;
+              clear: both;
+            }
+          </code>
+        </pre>
 
-        <p>Here we append the ::after pseudo-element to the parent element's
-          selector.</p>
-
+        <p>Here we append the <code>::after</code> pseudo-element to the parent
+          element's selector.</p>
+      </section>
+      <section id="relative-section">
         <h1>Positioning</h1>
 
         <p>We sometimes want to position elements at specific locations on the
@@ -386,8 +451,8 @@
 
         <p>Lets you place an element at a fixed position in the browser window;
           it will remain in place even when you scroll the page. You need the
-          top`, `bottom`, `right`, and `left properties to position the
-          element.</p>
+          <code>top</code>, <code>bottom</code>, <code>right</code>, and
+          <code>left</code> properties to position the element.</p>
 
         <p>The browser removes elements with fixed positioning from the page
           flow. It does not leave a gap in the location where the browser
@@ -396,7 +461,7 @@
         <p>The blue box on the bottom-left corner of the page is a fixed
           position element.</p>
 
-        I use fixed positioning.
+        <div id="fissed" class="blue-bg">I use fixed positioning.</div>
 
         <h2>Relative Positioning</h2>
 
@@ -405,7 +470,7 @@
           does not remove an element from the page flow; in fact, you can
           observe a gap in the flow indicating the original position.</p>
 
-        I use relative positioning.
+        <div id="relative" class="tomato-bg">I use relative positioning.</div>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cumque
           repellat sapiente vitae nihil debitis accusamus, odit, tempore id
@@ -416,12 +481,12 @@
 
         <p>Absolute positioning removes an element from the normal page flow
           and positions it at an absolute position relative to its parent
-          element. If the parent element is the `&lt;body&gt;`, the position is
-            absolute relative to the complete page.</p>
+          element. If the parent element is the <code>&lt;body&gt;</code>, the
+          position is absolute relative to the complete page.</p>
 
         <p>The green box shows uses absolute positioning.</p>
 
-        I use absolute positioning.
+        <div id="absolute" class="green-bg">I use absolute positioning.</div>
       </section>
     </article>
   </body>

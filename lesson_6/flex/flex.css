@@ -1,0 +1,109 @@
+/*  Make all your modifications to the CSS file; don't make any changes to the
+HTML. Do not use any float, position, or grid properties, and don't convert
+any elements to inline-block. Use Flex features instead.
+
+Flex and Grid naturally work in concert. This contrived project intentionally
+restricts the use of Grid to force you to use Flex. */
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: white;
+  color: black;
+  font: normal 24px Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  background-color: blue;
+  color: white;
+}
+
+header {
+  padding: 1rem;
+  background-color: blue;
+  text-align: center;
+}
+
+nav {
+  background-color: cyan;
+}
+
+nav ul {
+  display:flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+nav ul li {
+  text-align: center;
+  width: 20%;
+}
+
+a {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 1rem 0;
+  text-decoration: none;
+  width: 100%;
+}
+
+a:focus,
+a:hover {
+  background-color: blue;
+  color: yellow;
+}
+
+main {
+  display:flex;
+  align-items: stretch;
+}
+
+article,
+aside {
+  padding: 0 1rem;
+}
+
+article {
+  flex: 2;
+}
+
+aside {
+  background-color: lightgreen;
+  flex: 1;
+}
+
+article ol {
+  padding: 0 2rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+footer {
+  background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+#copyright {
+  margin: 0 1rem;
+  /* outline: 1px solid red; */
+}
+
+#logo {
+  background-color: orange;
+  /* outline: 1px solid red; */
+}
+
+img {
+  display: block;
+  height: 200px;
+  /* outline: 1px solid red; */
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Example Liquid Photo Gallery</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="gallery.css" /> -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        background-color: #151515;
+        color: #f0f0f0;
+        font: normal 16px Helvetica, Arial, sans-serif;
+      }
+
+      main {
+        background-color: #333;
+        color: inherit; /* #f0f0f0 */
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        max-width: 1000px;
+        /* min-width: 500px; */
+        padding: 25px 20px 20px;
+      }
+
+      h1 {
+        margin: 1.33rem 0;
+        text-align: center;
+      }
+
+      img {
+        box-sizing: border-box;
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+
+      figure {
+        margin: 0;
+        padding: 0 0 30px;
+      }
+
+      figure img {
+        border: 15px solid white;
+      }
+
+      figcaption {
+        display: block;
+        padding: 10px 0 0;
+      }
+
+      ul {
+        font-size: 0;
+        margin: 0 -15px;
+        padding: 0;
+      }
+
+      li {
+        box-sizing: border-box;
+        display: inline-block;
+        margin-bottom: 30px;
+        padding: 0 15px;
+        vertical-align: top;
+        width: 25%;
+      }
+
+      li img {
+        border: 3px solid white;
+      }
+
+      @media (max-width: 900px) {
+        li {
+          width: 33.33%
+        }
+      }
+      @media (max-width: 600px) {
+        li {
+          width: 50%
+        }
+      }
+
+      article {
+        width: 90%;
+        max-width: 1000px;
+        margin: 5rem auto;
+      }
+
+      article > p {
+        line-height: 2;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>My Photo Gallery</h1>
+      <figure>
+        <img src="http://placehold.it/1200x900" alt="" />
+        <figcaption>Example photo</figcaption>
+      </figure>
+      <ul>
+        <li>
+          <img src="http://placehold.it/1200x900" alt="Photo 1" title="Photo 1" />
+        </li>
+        <li>
+          <img src="http://placehold.it/1200x900" alt="Photo 2" title="Photo 2" />
+        </li>
+        <li>
+          <img src="http://placehold.it/1200x900" alt="Photo 3" title="Photo 3" />
+        </li>
+        <li>
+          <img src="http://placehold.it/1200x900" alt="Photo 4" title="Photo 4" />
+        </li>
+        <li>
+          <img src="http://placehold.it/1200x900" alt="Photo 4" title="Photo 4" />
+        </li>
+        <li>
+          <img src="http://placehold.it/1200x900" alt="Photo 4" title="Photo 4" />
+        </li>
+        <li>
+          <img src="http://placehold.it/1200x900" alt="Photo 4" title="Photo 4" />
+        </li>
+        <li>
+          <img src="http://placehold.it/1200x900" alt="Photo 4" title="Photo 4" />
+        </li>
+      </ul>
+    </main>
+    <article>
+      <p>Add a meta tag that tells the browser that this page is a responsive design.</p>
+        <br />
+      <p>Remove the minimum width from the project.</p>
+        <br />
+      <p>Add several additional thumbnail images to the HTML to help make your changes stand out as the number of thumbnails per line shrinks. Add some margin between each row of thumbnails.</p>
+        <br />
+      <p>Add a media query with the CSS you need to limit the number of thumbnails per line to three when the window width is less than 900px.</p>
+        <br />
+      <p>Add a media query with the CSS you need to limit the number of thumbnails per line to two when the window width is less than 600px.</p>
+        <br />
+      <p><b>Challenge</b> Add a media query and the necessary CSS to move the thumbnails to the right side of the primary photo as a single column of thumbnails when the browser's width is 1280 pixels or more. Allow the thumbnails to continue expanding as you increase the window width, but limit the central photo to 950px. If your display can't handle 1280 pixels, choose a smaller value and make any necessary adjustments. See the completed project for the expected appearance.</p>
+    </article>
+  </body>
+</html>

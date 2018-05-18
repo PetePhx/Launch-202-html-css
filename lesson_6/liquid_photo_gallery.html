@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>On Your Own: Liquid Photo Gallery</title>
+    <meta charset="utf-8" />
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        /* outline: 1px solid red; */
+      }
+
+      html {
+        font: normal 20px helvetica arial sans-serif;
+        color: white;
+      }
+
+      body {
+        background-color: black;
+      }
+
+      main {
+        background-color: rgb(50, 50, 50);
+        min-width: 500px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 10px;
+        display: grid;
+      }
+
+      header {
+        padding: 1rem;
+        justify-self: center;
+      }
+
+      figure {
+        margin: 10px;
+      }
+
+      div.img-container {
+        margin: 10px;
+        justify-self: stretch;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      img {
+        display: block;
+        box-sizing: border-box;
+        object-fit: cover;
+      }
+
+      img.thumb {
+        border: 5px solid white;
+        max-width: 24%;
+        max-height: 8rem;
+      }
+
+      #main-img {
+        border: 10px solid white;
+        max-width: 100%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>My Photo Gallery</h1>
+      </header>
+
+      <figure>
+        <img id="main-img" src="http://placehold.it/1200x900" alt="Example Photo" />
+        <figcaption>Example Photo</figcaption>
+      </figure>
+      <!-- <div><p>hi 1</p></div> -->
+
+      <div class="img-container">
+        <!-- <div><p>hi 2</p></div> -->
+        <img class="thumb" src="http://placehold.it/1200x900" alt="Example" title="Example"/>
+        <img class="thumb" src="http://placehold.it/1200x900" alt="Example" title="Example"/>
+        <img class="thumb" src="http://placehold.it/1200x900" alt="Example" title="Example"/>
+        <img class="thumb" src="http://placehold.it/1200x900" alt="Example" title="Example"/>
+      </div>
+
+    </main>
+  </body>
+</html>

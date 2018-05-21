@@ -18,11 +18,82 @@
         background-repeat: no-repeat;
       }
 
+      header {
+        width: 920px;
+        padding: 20px 20px 0 20px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
       h1 {
+        float: left;
         padding: 45px 0 15px 115px;
         font-size: 36px;
+        font-weight: normal;
         color: rgb(25, 52, 65);
         background: transparent url("logo.png") 0 0 no-repeat;
+      }
+
+      nav {
+        float: right;
+        padding: 75px 0 0 0;
+      }
+
+      nav li {
+        display: inline-block;
+        /* width: 25%; */
+      }
+
+      nav a {
+        display: block;
+        padding: 10px 40px 14px 40px;
+        color: rgb(145, 170, 157);
+        text-decoration: none;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        background-color: rgb(252, 255, 245);
+      }
+
+      nav a.active {
+        color:rgb(252, 255, 245);
+        background-color:rgb(145, 170, 157);
+      }
+
+      main {
+        box-sizing: border-box;
+        overflow: hidden;
+        clear: both;
+        width: 960px;
+        background-color: rgb(255, 255, 255);
+        padding: 30px;
+        margin: 0 auto;
+        box-shadow: 0 5px 5px rgb(181, 181, 181);
+      }
+
+      img.masthead {
+        margin: 0 0 40px 0;
+      }
+
+      h2 {
+        font-size: 32px;
+        padding: 0 0 25px 0;
+        font-weight: normal;
+      }
+
+      p {
+        margin: 0 0 20px 0;
+      }
+
+      figure {
+        float: right;
+        margin: 0 0 0 30px;
+      }
+
+      footer {
+        width: 960px;
+        margin: 0 auto;
+        font-size: 14px;
+        padding: 15px 0;
       }
 
     </style>
@@ -30,6 +101,55 @@
   <body>
     <header>
       <h1>Shutter Bug</h1>
+      <nav>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
+    <main>
+      <img class="masthead" src="img_masthead.jpg"
+      title="img_masthead.jpg" alt="img_masthead.jpg" />
+
+      <h2>Welcome to Shutter Bug</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
+        nisl vel eros semper maximus at in quam. Suspendisse ac lectus ac eros
+        pulvinar finibus luctus sed magna. Duis eleifend placerat metus, sed
+        malesuada ipsum rhoncus viverra. Donec vel ullamcorper lorem. Integer
+        accumsan mauris vel ex porttitor, et pharetra nisi finibus. Vestibulum
+        vitae sagittis risus. Fusce ornare tempor purus eget blandit. Quisque
+        eu erat non odio lobortis sollicitudin ultrices nec arcu. Pellentesque
+        eget iaculis purus. Morbi ac libero egestas, maximus ex id,
+        mattis arcu. Praesent tincidunt justo non luctus dapibus.
+        Little Talbot Island</p>
+
+        <figure>
+          <img src="img_article.jpg" alt="img_article" title="img_article" />
+        </figure>
+
+      <p>Pellentesque vel congue dolor. Aenean varius lectus massa, ac pharetra
+        sapien egestas sit amet. Maecenas non ipsum convallis, vestibulum augue
+        eget, molestie urna. Donec a mauris pretium, eleifend felis eu, dapibus
+        mi. Nunc vel imperdiet arcu. Morbi hendrerit rhoncus eleifend. Nullam
+        sodales tincidunt consequat. Maecenas ut laoreet dui, et hendrerit
+        nisi.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
+        nisl vel eros semper maximus at in quam. Suspendisse ac lectus ac eros
+        pulvinar finibus luctus sed magna. Duis eleifend placerat metus, sed
+        malesuada ipsum rhoncus viverra. Donec vel ullamcorper lorem. Integer
+        accumsan mauris vel ex porttitor, et pharetra nisi finibus. Vestibulum
+        vitae sagittis risus. Fusce ornare tempor purus eget blandit. Quisque
+        eu erat non odio lobortis sollicitudin ultrices nec arcu. Pellentesque
+        eget iaculis purus. Morbi ac libero egestas, maximus ex id,
+        mattis arcu. Praesent tincidunt justo non luctus dapibus.</p>
+    </main>
+    <footer>
+      <p> &copy; 2015 Shutter Bug</p>
+    </footer>
   </body>
 </html>

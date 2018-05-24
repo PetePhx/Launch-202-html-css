@@ -5,11 +5,14 @@
     <meta charset="utf-8" />
     <style>
       @import url("../../reset.css");
-      @import url('https://fonts.googleapis.com/css?family=Nunito');
+       @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+      html {
+        font: normal 20px "Nunito Sans", sans-serif;
+      }
 
       html * {
         box-sizing: border-box;
-        font: normal 20px Nunito, sans-serif
       }
 
       body {
@@ -20,13 +23,19 @@
       header {
         display: flex;
         justify-content: center;
-        padding-top: 151px;
-        padding-bottom: 84px;
+        padding-top: 159px;
+        padding-bottom: 93px;
+      }
+
+      main,
+      footer {
+        width: 1000px;
+        margin: 0 auto;
       }
 
       main {
         background-color: white;
-        margin: 0 100px;
+        padding: 100px 80px 55px 90px;
       }
 
       main > * {
@@ -34,23 +43,43 @@
       }
 
       main h1 {
-        font: bold 24px Nunito;
-        padding-top: 111px;
-        padding-bottom: 41px;
+        font-size: 36px;
+        font-weight: 600;
+        padding-bottom: 25px;
+      }
+
+      main h1::before,
+      main h1::after {
+        content: "•" ;
+        font-size: 28px;
+        vertical-align: 5px;
+        margin: 0 26px;
       }
 
       main h2 {
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: rgb(62, 152, 178);
+        padding-bottom: 30px;
+      }
 
+      main article.about {
+        margin-bottom: 160px;
+      }
+
+      main article.founder {
+        padding-bottom: 0;
       }
 
       main p {
-        margin: 0 90px;
+        font-size: 1rem;
+        letter-spacing: 0.01rem;
       }
 
       footer {
         background-color: rgb(231, 231, 231);
-        margin: 0 100px 143px 100px;
-
+        margin-bottom: 120px;
         display: flex;
         justify-content: center;
       }
@@ -68,19 +97,21 @@
     </header>
     <main>
       <article class="about">
-        <h1>&bull; About Us &bull;</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure in.</p>
-      </article>
-      <article class="founder">
-        <h1>&bull; Our Founder: &bull;</h1>
-        <h2>Admiral Kerning</h2>
+        <h1>About Us</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
+      </article>
+      <article class="founder">
+        <h1>Our Founder</h1>
+        <h2>Admiral Kerning</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint.</p>
       </article>
     </main>
     <footer>

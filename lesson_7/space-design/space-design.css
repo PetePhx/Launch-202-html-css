@@ -1,0 +1,134 @@
+@import url(whitespace-reset.css);
+
+html {
+  font: normal 20px "Avenir", "Nunito Sans", helvetica, arial, sans-serif;
+}
+
+body {
+  background: rgb(47, 40, 67) url("images/bg_body.gif") 6% top repeat;
+  text-align: center;
+  color: rgb(69, 73, 77);
+  padding: 135px 0 0 0;
+}
+
+header {
+
+}
+
+header > h1 {
+  margin: 0 0 110px 0;
+}
+
+nav {
+  padding: 0 0 45px 0 ;
+  font-size: 26px;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  padding: 0 45px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(202, 202, 202);
+}
+
+nav a.active {
+  font-weight: bold;
+  color: rgb(109, 185, 255);
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 100px 0 0 0;
+  background-color: white;
+  overflow: hidden;
+}
+
+main article {
+  margin: 0 0 100px 0;
+}
+
+main .column {
+  width: 800px;
+  margin: 0 auto;
+}
+
+main h2 {
+  padding: 0 0 40px 0;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+main h2::before,
+main h2::after {
+  display: inline-block;
+  content: "\2022";
+  padding: 0 25px;
+  font-size: 22px;
+  vertical-align: 5px;
+}
+
+main h3 {
+  padding: 0 0 20px 0;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: rgb(62, 89, 178);
+}
+
+footer {
+  background-color: rgb(231, 231, 231);
+  padding: 80px 0;
+  color: rgb(178, 178, 178);
+}
+
+footer p {
+  padding: 0 0 35px 0;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0 60px;
+}
+
+footer li a {
+  background:
+    transparent
+    url("http://d3jtzah944tvom.cloudfront.net/202/projects/lesson_7/spacedesign/images/icons_social-media.png")
+    0 0 no-repeat;
+  display: block;
+  height: 46px;
+  /* overflow: hidden; */
+  /* text-indent: -8685px; */
+  color: rgba(0, 0, 0, 0);
+  width: 46px;
+}
+
+footer li a.twitter {
+  background-position: 0 0;
+}
+
+footer li a.facebook {
+  background-position: 0 -46px;
+  /* background-position: 0 33.333%; */
+}
+
+footer li a.email {
+  background-position: 0 -92px;
+  /* background-position: 0 66.667%; */
+}
+
+footer li a.instagram {
+  background-position: 0 -138px;
+  /* background-position: 0 100%; */
+}

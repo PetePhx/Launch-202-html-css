@@ -58,9 +58,14 @@ main article {
   margin: 0 0 100px 0;
 }
 
+main article p {
+  padding: 0 110px;
+}
+
 main .column {
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 main h2 {
@@ -131,4 +136,36 @@ footer li a.email {
 footer li a.instagram {
   background-position: 0 -138px;
   /* background-position: 0 100%; */
+}
+
+#projects figure {
+  padding: 0 0 55px 0;
+}
+
+#projects figure img {
+  display: block;
+}
+
+#team p {
+  padding: 0 120px 120px 120px;
+}
+
+#team ul {
+  display: flex;
+  padding: 0 125px 225px 125px;
+  justify-content: space-between;
+}
+
+#team li {
+  font-size: 24px;
+}
+
+#team img {
+  display: block;
+  margin: 0 0 25px 0;
+}
+
+#team a {
+  text-decoration: none;
+  color: rgb(62, 89, 178);
 }

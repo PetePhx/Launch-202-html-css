@@ -1,0 +1,94 @@
+@import url(whitespace-reset.css);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: normal 20px helvetica, arial, sans-serif;
+  background: white;
+}
+
+body {
+  width: 980px;
+  height: 791px;
+  margin: 0 auto;
+  background-color: rgb(255, 213, 5);
+}
+
+header,
+main {
+  width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  height: 105px;
+  background-color: rgb(4, 126, 193);
+  color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+header > h1 {
+  font-size: 36px;
+  font-weight: 1000;
+  padding: 0 25px;
+  letter-spacing: 1px;
+}
+
+main {
+  height: 615px;
+  margin-top: 30px;
+  padding: 0 25px;
+  color: black;
+  background-color: rgb(236, 236, 236);
+}
+
+main > h2 {
+  font-size: 32px;
+  font-weight: 1000;
+  /* letter-spacing: 1px; */
+  padding-top: 25px;
+}
+
+main div.catalog_container {
+  height: 490px;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 18px;
+  /* outline: 1px solid blue; */
+}
+
+main div.figure_container {
+  padding: 15px;
+  background-color: white;
+  /* outline: 1px solid red; */
+}
+
+main figure.item {
+  max-width: 100%;
+  padding-bottom: 20px;
+  /* outline: 1px solid teal; */
+}
+
+main img {
+  display: block;
+  height: 140px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+main figcaption {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main p.price {
+  padding-top: 5px;
+  font-size: 16px;
+}

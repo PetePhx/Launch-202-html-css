@@ -5,6 +5,11 @@
   text-decoration: none;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 a,
 a:visited {
   color: inherit;
@@ -23,6 +28,7 @@ header {
   border-top: 10px solid rgb(245, 245, 245);
   position: fixed;
   top: 0;
+  border-bottom: 1px solid rgb(245, 245, 245);
   /* background-color: white; */
 }
 
@@ -47,17 +53,16 @@ header ul li a:hover {
 /* BANNER */
 
 .banner {
-  margin-top: 30px;
-  height: 480px;
+  margin-top: 55px;
+  padding-top: 150px;
+  padding-bottom: 55px;
+  /* height: 470px; */
   background-image: url("images/front.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 175px;
   color: white;
   text-align: center;
-  /* display: flex;
-  flex-direction: column;
-  align-content: center; */
+  /* outline: 1px solid red; */
 }
 
 .banner img {
@@ -79,22 +84,44 @@ header ul li a:hover {
   text-transform: uppercase;
 }
 
+/* ALL SECTIONS */
+
+section.tickets,
+section.speakers,
+section.schedule,
+section.location,
+section.call_for_papers,
+section.sponsors {
+  text-align: center;
+  margin: 0 10px;
+  padding-bottom: 78px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+section.tickets h1,
+section.speakers h1,
+section.schedule h1,
+section.location h1,
+section.call_for_papers h1,
+section.sponsors h1 {
+  font-size: 48px;
+  font-weight: 300;
+  padding-top: 58px;
+  padding-bottom: 30px;
+}
+
 /* TICKETS */
 
 .tickets {
-  text-align: center;
+  /* outline: 1px solid red; */
 }
 
 .tickets h1 {
-  font-size: 48px;
-  font-weight: 300;
-  padding-top: 32px;
 }
 
 .tickets p {
   font-size: 16px;
   font-weight: 300;
-  padding-top: 32px;
   padding-bottom: 20px;
 }
 
@@ -105,3 +132,95 @@ header ul li a:hover {
   /* margin-top: 10px; */
   padding: 10px 30px;
 }
+
+/* SPEAKERS */
+
+.speakers ul {
+  max-width: 900px;
+  margin: 0 auto -15px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* outline: 1px solid red; */
+}
+
+.speakers ul li {
+  width: 280px;
+  height: 380px;
+  margin: 6px 6px;
+  border: 1px solid rgb(230, 230, 230);
+  overflow: hidden;
+  /* display: inline-block; */
+}
+
+.speakers ul li h2 {
+  color: rgb(0, 128, 0);
+  font-size: 24px;
+  font-weight: bold;
+  padding: 28px 0 8px 0;
+}
+
+.speakers ul li p {
+  color: rgb(128, 128, 128);
+  font-size: 16px;
+}
+
+/* SCHEDULE */
+
+.schedule table {
+  max-width: 950px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.schedule table td {
+  border-top: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid rgb(230, 230, 230);
+  padding: 11px 5px;
+  font-size: 24px;
+}
+
+/* .schedule table td, */
+.schedule table h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.schedule table h2,
+.schedule table h3 {
+  text-align: left;
+  padding: 0 14px;
+}
+
+.schedule table h3 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 8px;
+  color: rgb(0, 128, 0);
+}
+
+.schedule table td:first-child {
+  text-align: left;
+  padding-left: 8px;
+}
+
+.schedule table tr td:nth-child(3) {
+  /* text-align: right; */
+  padding: 10px 5px;
+}
+
+.schedule table img {
+  width: 130px;
+}
+
+.schedule table h2 span {
+  display: inline-block;
+  font-size: 7px;
+  border: 1px solid rgb(170, 170, 170);
+  background-color: rgb(238, 238, 238);
+  padding: 1px 4px;
+  vertical-align: 5px;
+}
+
+.schedule table h2 span:first-child {
+  margin-left: 8px;

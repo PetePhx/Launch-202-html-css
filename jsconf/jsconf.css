@@ -1,5 +1,11 @@
 @import url(reset.css);
 
+html {
+  box-sizing: border-box;
+  font: normal 16px "Open Sans", Arial, sans-serif;
+  color: rgb(64, 64, 64);
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
   text-decoration: none;
@@ -15,10 +21,16 @@ a:visited {
   color: inherit;
 }
 
-html {
-  box-sizing: border-box;
-  font: normal 16px "Open Sans", Arial, sans-serif;
-  color: rgb(64, 64, 64);
+a.greenrectangle {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(0, 128, 0);
+  padding: 10px 30px;
+}
+
+a.greenlink {
+  color: rgb(0, 128, 0);
+  font-weight: bold;
 }
 
 /* HEADER */
@@ -29,7 +41,7 @@ header {
   position: fixed;
   top: 0;
   border-bottom: 1px solid rgb(245, 245, 245);
-  /* background-color: white; */
+  background-color: white;
 }
 
 header ul {
@@ -56,13 +68,11 @@ header ul li a:hover {
   margin-top: 55px;
   padding-top: 150px;
   padding-bottom: 55px;
-  /* height: 470px; */
   background-image: url("images/front.jpg");
   background-position: center;
   background-repeat: no-repeat;
   color: white;
   text-align: center;
-  /* outline: 1px solid red; */
 }
 
 .banner img {
@@ -78,13 +88,12 @@ header ul li a:hover {
 }
 
 .banner h2 {
-  /* padding-top: 0px; */
   font-size: 31px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-/* ALL SECTIONS */
+/* ALL MAIN SECTIONS */
 
 section.tickets,
 section.speakers,
@@ -93,7 +102,7 @@ section.location,
 section.call_for_papers,
 section.sponsors {
   text-align: center;
-  margin: 0 10px;
+  margin: 0 auto;
   padding-bottom: 78px;
   border-bottom: 1px solid rgb(240, 240, 240);
 }
@@ -112,25 +121,10 @@ section.sponsors h1 {
 
 /* TICKETS */
 
-.tickets {
-  /* outline: 1px solid red; */
-}
-
-.tickets h1 {
-}
-
 .tickets p {
   font-size: 16px;
   font-weight: 300;
   padding-bottom: 20px;
-}
-
-.tickets a {
-  color: white;
-  font-weight: bold;
-  background-color: rgb(0, 128, 0);
-  /* margin-top: 10px; */
-  padding: 10px 30px;
 }
 
 /* SPEAKERS */
@@ -150,7 +144,6 @@ section.sponsors h1 {
   margin: 6px 6px;
   border: 1px solid rgb(230, 230, 230);
   overflow: hidden;
-  /* display: inline-block; */
 }
 
 .speakers ul li h2 {
@@ -199,17 +192,16 @@ section.sponsors h1 {
   color: rgb(0, 128, 0);
 }
 
-.schedule table td:first-child {
+.schedule table td.time {
   text-align: left;
   padding-left: 8px;
 }
 
-.schedule table tr td:nth-child(3) {
-  /* text-align: right; */
+.schedule table td.image {
   padding: 10px 5px;
 }
 
-.schedule table img {
+.schedule table .image img {
   width: 130px;
 }
 
@@ -224,3 +216,120 @@ section.sponsors h1 {
 
 .schedule table h2 span:first-child {
   margin-left: 8px;
+}
+
+/* LOCATION */
+
+.location p {
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.location iframe.googlemap {
+  width: 100%;
+  height: 500px;
+  margin: 30px 0;
+}
+
+/* Call for Papers */
+
+.call_for_papers p {
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 10px 0;
+}
+
+/* SPONSORS */
+
+.sponsors {
+  max-width: 960px;
+
+}
+
+.sponsors h2 {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sponsors ul.sponsor_container {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.sponsors ul.sponsor_container.gold {
+  max-width: 800px;
+}
+
+.sponsors ul.sponsor_container li img {
+  padding: 5px 0 0 5px;
+}
+
+.sponsors ul.sponsor_container.platinum img,
+.sponsors ul.sponsor_container.gold img {
+  width: 300px;
+}
+
+.sponsors ul.sponsor_container.silver img {
+  width: 240px;
+  margin-right: 40px;
+}
+
+.sponsors ul.sponsor_container.support img {
+  width: 180px;
+  margin-right: 40px;
+}
+
+/* FOOTER */
+
+footer {
+  height: 340px;
+  width: 100%;
+  margin-top: -40px;
+  text-align: center;
+  color: white;
+  background-image: url("images/people.jpg");
+  background-size: cover;
+  background-position: 0 25%;
+  background-repeat: no-repeat;
+}
+
+footer h1 {
+  font-size: 48px;
+  font-weight: 100;
+  padding: 30px 0;
+}
+
+footer div.darkened {
+  background-color: rgb(0, 0, 0, 0.7);
+  padding: 10px 0 30px 0;
+  overflow: hidden;
+}
+
+footer div.team_container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+footer div.team_container h2 {
+  font-size: 31px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+footer div.team_container p {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 20px;
+}

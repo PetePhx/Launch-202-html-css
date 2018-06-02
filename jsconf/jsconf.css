@@ -134,8 +134,8 @@ section.sponsors {
   text-align: center;
   margin: 0 auto;
   padding-bottom: 78px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   border-bottom: 1px solid rgb(240, 240, 240);
 }
 
@@ -146,8 +146,8 @@ section.sponsors {
   section.location,
   section.call_for_papers,
   section.sponsors {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -392,8 +392,4 @@ footer div.team_container p {
     font-size: 48px;
     padding: 30px 0;
   }
-
-
-
-
 }

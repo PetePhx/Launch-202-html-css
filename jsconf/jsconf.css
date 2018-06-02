@@ -179,7 +179,6 @@ section.sponsors h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* outline: 1px solid red; */
 }
 
 .speakers ul li {
@@ -261,6 +260,48 @@ section.sponsors h1 {
 
 .schedule table h2 span:first-child {
   margin-left: 8px;
+}
+
+@media (max-width: 650px) {
+
+  .schedule table tr {
+    padding: 0 20px;
+    display: grid;
+    grid-template-areas:
+    "image time"
+    "title title";
+  }
+
+  .schedule table tr td.image {
+    grid-area: image;
+    border: none;
+    text-align: left;
+    padding-top: 15px;
+    padding-right: 14px;
+    padding-left: 25px;
+    /* outline: 1px solid red; */
+  }
+
+  .schedule table tr td.image img {
+    width: 80px;
+  }
+
+  .schedule table tr td.time {
+    grid-area: time;
+    border: none;
+    text-align: right;
+    vertical-align: middle;
+    padding-top: 15px;
+    padding-right: 14px;
+    /* outline: 1px solid red; */
+  }
+
+  .schedule table tr td.title {
+    grid-area: title;
+    border-top: none;
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
 }
 
 /* LOCATION */
